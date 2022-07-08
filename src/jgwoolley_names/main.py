@@ -8,6 +8,7 @@ def create_argparser() -> argparse.ArgumentParser:
     parser.add_argument('--cache_name', metavar='c', dest='cache_name', default='names_requests')
     parser.add_argument('--backend', metavar='b', dest='backend', default='sqlite')
     parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='names.db')
+    parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('w'), default=None)
 
     subparsers = parser.add_subparsers(dest='command',help='sub-command help', required=True)
     subparsers.add_parser('wikicategories', help='Parse wiki-categories')
@@ -18,17 +19,25 @@ def create_argparser() -> argparse.ArgumentParser:
     wikipages_out = subparsers.add_parser('wikipages_out', help='output wiki-categories to csv')
     wikipages_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikipages_out.csv')
 
-
     return parser
+
+def read_categories(args:argparse.ArgumentParser):
+    if args.categories is None:
+        return {
+            'given_names': ['Category:Given names by language'],
+            'surnames': ['Category:Surnames_by_language']
+        }
+    
+    import json
+    with args.categories.open('r') as fp:
+        return json.load(fp)
 
 def _create_wikicategories(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
     import sqlite3
-    from .wiki_pages import create_wikipages
+    from .wiki_categories import create_wikicategories
 
-    categories = {
-        'surnames': ['Category:Surnames_by_language']
-    }
+    categories = read_categories(args)
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         with sqlite3.connect(args.sqlite_database) as connection:
