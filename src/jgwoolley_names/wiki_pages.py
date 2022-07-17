@@ -13,7 +13,8 @@ def create_table(connection:sqlite3.Connection):
     cur.execute('CREATE TABLE IF NOT EXISTS wiki_pages (cmtitle TEXT NOT NULL, type TEXT NOT NULL, language_ids NOT NULL, genders NOT NULL, parent_cmtitle NOT NULL)')
     connection.commit()
 
-def create_wikipages(connection:sqlite3.Connection, session:requests.Session, url:str):
+def create_wikipages(connection:sqlite3.Connection, session:requests.Session):
+    #TODO: Removed url:str
     create_table(connection=connection)
     connection.row_factory = sqlite3.Row 
     cur = connection.cursor()

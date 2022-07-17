@@ -1,13 +1,15 @@
 import argparse
 
+from typing import List
+from .model import WikiRecord
+
 def create_argparser() -> argparse.ArgumentParser:
     description='A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language'
     parser = argparse.ArgumentParser(description)
 
-    parser.add_argument('--wikimedia_url', metavar='u', dest='wikimedia_url', default='https://en.wiktionary.org/w/api.php')
     parser.add_argument('--cache_name', metavar='c', dest='cache_name', default='names_requests')
     parser.add_argument('--backend', metavar='b', dest='backend', default='sqlite')
-    parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='names.db')
+    parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='sqlite:///names.db')
     parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('w'), default=None)
 
     subparsers = parser.add_subparsers(dest='command',help='sub-command help', required=True)
@@ -21,43 +23,66 @@ def create_argparser() -> argparse.ArgumentParser:
 
     return parser
 
-def read_categories(args:argparse.ArgumentParser):
+def read_categories(args:argparse.ArgumentParser) -> List[WikiRecord]:
     if args.categories is None:
-        return {
-            'given_names': ['Category:Given names by language'],
-            'surnames': ['Category:Surnames_by_language']
-        }
+        url = 'https://en.wiktionary.org/w/api.php'
+        return [
+            WikiRecord(    
+                cmtitle = 'Category:Given names by language',
+                url = url,
+                category_type = 'given_names'
+            ),
+            WikiRecord(    
+                cmtitle = 'Category:Surnames_by_language',
+                url = url,
+                category_type = 'surnames'
+            )
+        ]
     
     import json
     with args.categories.open('r') as fp:
-        return json.load(fp)
+        return [WikiRecord.parse_obj(x) for x in json.load(fp)]
 
 def _create_wikicategories(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
-    import sqlite3
+    from sqlmodel import SQLModel, create_engine, Session
     from .wiki_categories import create_wikicategories
 
     categories = read_categories(args)
+    for parent in categories:
+        if not isinstance(parent, WikiRecord):
+            raise Exception(f'Given category isn\'t WikiRecord: {type(parent)}')
+
+        for k, v in {'url': parent.url, 'category_type':parent.category_type, 'cmtitle': parent.cmtitle}.items():
+            if v is None:
+                raise TypeError(f'{k} must not be none for record: {parent}')
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
-        with sqlite3.connect(args.sqlite_database) as connection:
-            create_wikicategories(connection=connection, session=session, url=args.wikimedia_url, categories=categories)
+        engine = create_engine(args.sqlite_database)
+        SQLModel.metadata.create_all(engine)
+        with Session(engine) as sql_session:
+            create_wikicategories(sql_session=sql_session, session=session, categories=categories)
 
 def _create_wikipages(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
-    import sqlite3
+    from sqlmodel import SQLModel, create_engine, Session
     from .wiki_pages import create_wikipages
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
-        with sqlite3.connect(args.sqlite_database) as connection:
-            create_wikipages(connection=connection, session=session, url=args.wikimedia_url)
+        engine = create_engine(args.sqlite_database)
+        SQLModel.metadata.create_all(engine)
+        with Session(engine) as sql_session:
+            create_wikipages(sql_session=sql_session, session=session)
    
 
 def _wikicategories_out(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
-    import sqlite3, csv 
+    from sqlmodel import SQLModel, create_engine, Session
+    import csv 
 
-    with sqlite3.connect(args.sqlite_database) as connection:
+    engine = create_engine(args.sqlite_database)
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as sql_session:
         connection.row_factory = sqlite3.Row 
         cur = connection.cursor()
         cur.execute('SELECT * FROM wiki_categories')
@@ -71,9 +96,12 @@ def _wikicategories_out(args:argparse.ArgumentParser):
 
 def _wikipages_out(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
-    import sqlite3, csv 
+    from sqlmodel import SQLModel, create_engine, Session
+    import csv 
 
-    with sqlite3.connect(args.sqlite_database) as connection:
+    engine = create_engine(args.sqlite_database)
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as sql_session:
         connection.row_factory = sqlite3.Row 
         cur = connection.cursor()
         cur.execute('SELECT * FROM wiki_pages')
