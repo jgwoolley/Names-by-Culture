@@ -28,14 +28,14 @@ def read_categories(args:argparse.ArgumentParser) -> List[WikiRecord]:
         url = 'https://en.wiktionary.org/w/api.php'
         return [
             WikiRecord(    
-                cmtitle = 'Category:Given names by language',
-                url = url,
-                category_type = 'given_names'
-            ),
-            WikiRecord(    
                 cmtitle = 'Category:Surnames_by_language',
                 url = url,
                 category_type = 'surnames'
+            ),
+            WikiRecord(    
+                cmtitle = 'Category:Given names by language',
+                url = url,
+                category_type = 'given_names'
             )
         ]
     

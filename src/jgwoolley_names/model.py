@@ -8,7 +8,20 @@ del Select, SelectOfScalar
 import enum
 
 from sqlmodel import SQLModel, Field, Column, Enum
-from typing import Optional
+from typing import Optional, Iterable
+
+from pydantic import validator
+
+class LanguageName(SQLModel, table=True):
+    name : str = Field(primary_key=True)
+    language_id: str
+
+    # @validator('name', 'language_id', always=True)
+    # def to_lowercase(cls, v:str):
+    #     if not isinstance(v, str):
+    #         return None
+    #     assert v.isalpha() == True, 'Test'
+    #     return v.lower()
 
 class Language(SQLModel, table=True):
     id : str = Field(primary_key=True)
@@ -20,9 +33,24 @@ class Language(SQLModel, table=True):
     ref_name : Optional[str]
     comment : Optional[str]
 
-class LanguageName(SQLModel, table=True):
-    name : str = Field(primary_key=True)
-    language_id: str
+    # @validator('id', 'part2b', 'part2t', 'part1', 'scope', 'language_type', 'ref_name', always=True)
+    # def to_lowercase(cls, v:str):
+    #     if not isinstance(v, str):
+    #         return None
+    #     assert v.isalpha() == True, 'Test'
+    #     return v.lower()
+
+    def create_references(self):
+        return [
+            LanguageName(
+                name=self.ref_name,
+                language_id=self.id
+            ),
+            LanguageName(
+                name=self.id,
+                language_id=self.id
+            )
+        ]
 
 class WikiRecordStatus(enum.Enum):
     unevaluated = "unevaluated"

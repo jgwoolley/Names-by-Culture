@@ -1,10 +1,10 @@
 import logging, requests, sqlmodel
 
 from typing import Dict, List, Optional, Tuple
-from jgwoolley_wikimedia import query_subcategory, query_category_pages, query_wikitext
+from jgwoolley_wikimedia import query_subcategory, query_category_pages, query_wikitext, query_category_info
 
-from .languages import write_languages_to_sql, find_language_ref_name, find_language_id
-from .model import WikiRecord, Language, WikiRecordStatus, Gender
+from .languages import write_languages_to_sql, find_language_id
+from .model import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
 
 genders = [x.value for x in Gender]
 
@@ -65,11 +65,7 @@ def choose_language(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:O
         if len(value) == 0 and suggested_value is not None:
             value = suggested_value
         
-        if find_language_ref_name(sql_session, value) is not None:
-            language_id = value
-            break
-
-        language_id = find_language_id(sql_session=sql_session, language=value)
+        language_id = find_language_id(sql_session=sql_session, name=value)
 
     return language_id
 
@@ -116,7 +112,7 @@ def guess_subcategory(url:str, sql_session:sqlmodel.Session, row:WikiRecord, sug
 
     row.language_id = suggested_language
     row.gender = suggested_gender
-    row.category_type = WikiRecordStatus.page
+    row.status = WikiRecordStatus.page
 
     sql_session.commit() 
 
@@ -165,11 +161,53 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
 
     return (category_type, parent_cmtitle, url)
 
+def add_language(sql_session:sqlmodel.Session):
+    input_guide = f'Please type alternative language name or type \"exit\"\n'
+    name=None
+    while name is None:
+        value = input(input_guide)
+        if value == 'exit':
+            return
+
+        if len(value) == 0:
+            continue
+
+        name = value
+
+    input_guide = f'Please type alternative language id for {name} or type \"exit\"\n'
+
+    language_id=None
+    while language_id is None:
+        value = input(input_guide)
+        if value == 'exit':
+            return
+
+        if len(value) == 0:
+            continue
+        
+        language_id = value
+        statement = sqlmodel.select(Language).where(Language.id == language_id)
+        results = sql_session.exec(statement)
+        result = results.first()
+
+        if result == None:
+            language_id=None
+            continue
+
+    print(f'Adding language reference {name} for {language_id}')
+    ref_data = LanguageName(
+        name = name, 
+        language_id = language_id
+    )
+    sql_session.add(ref_data)
+    sql_session.commit()
+
+#TODO: Default action changes from guess to add language
 
 def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session, categories=List[WikiRecord]):
     write_languages_to_sql(sql_session=sql_session, session=session)
 
-    actions, actions_guide, action_default = create_actions(['guess', 'update', 'split', 'ignore'])
+    actions, actions_guide, action_default = create_actions(['guess', 'update', 'split', 'ignore', 'language_add'])
 
     for parent in categories:
         category_type, parent_cmtitle, url = process_parent(sql_session=sql_session, session=session, parent=parent)
@@ -186,13 +224,22 @@ def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session
             suggested_gender = find_suggested_gender(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
             suggested_language = find_suggested_language(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
 
-            print(f'{row.cmtitle} [category_type=\"{row.category_type}\", suggested_language=\"{suggested_language}\", suggested_gender=\"{suggested_gender}\", url=\"{url}\"]')
+            print(f'{" ".join(cmtitle_tokens)} [category_type=\"{row.category_type}\"]')
+            print(f'\"suggested_language=\"{suggested_language}\", suggested_gender=\"{suggested_gender}\"')
+            print(f'category_info={query_category_info(url=url, title=row.cmtitle, session=session)}')
 
             action = None
             while not action in actions:
                 text = input(actions_guide).lower()
-                action = actions.get(text[0], action_default) if len(text) > 0 else 'g'
-            
+                if len(text) <= 0:
+                    action = 'g'
+                    continue
+                
+                action = actions.get(text)
+                if action == None:
+                    print(f'There is no action \"{text}\" in {list(actions.keys())}')
+                    continue
+
             if action == 'g':
                 guess_subcategory(url=url, sql_session=sql_session, row=row, suggested_language=suggested_language, suggested_gender=suggested_gender)
             elif action == 'u':
@@ -202,5 +249,8 @@ def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session
             elif action == 'i':
                 row.status = WikiRecordStatus.skipped
                 sql_session.commit()
+            elif action == 'l':
+                add_language(sql_session=sql_session)
+                suggested_language = find_suggested_language(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
             else:
                 raise Exception(f'There is no action {action} in {list(actions.keys())}')

@@ -68,6 +68,33 @@ def query_category_pages(url:str, cmtitle:str, session:requests.Session) -> List
     for result in query_category(url, params, 'categorymembers', session=session):
         yield result
 
+def query_category_info(url:str, title:str, session:requests.Session) -> List[dict]:
+    params = {
+        'action': 'query',
+        'titles': title,
+        'prop': 'categoryinfo',
+        'format': 'json'
+    }
+    data = query(url, params, session)
+
+    data = data.get('query')
+    if not isinstance(data, dict):
+        return None
+    
+    data = data.get('pages')
+    if not isinstance(data, dict):
+        return None
+
+    for page in data.values():
+        if not isinstance(page, dict):
+            return None
+        
+        page_title = page.get('title')
+        if page_title != title:
+            continue
+        
+        return page.get('categoryinfo')
+
 # import wikitextparser as wtp
 # return wtp.parse(data)
 
