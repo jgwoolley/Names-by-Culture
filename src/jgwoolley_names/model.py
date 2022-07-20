@@ -15,6 +15,7 @@ from pydantic import validator
 class LanguageName(SQLModel, table=True):
     name : str = Field(primary_key=True)
     language_id: str
+    source: str
 
     # @validator('name', 'language_id', always=True)
     # def to_lowercase(cls, v:str):
@@ -44,11 +45,13 @@ class Language(SQLModel, table=True):
         return [
             LanguageName(
                 name=self.ref_name,
-                language_id=self.id
+                language_id=self.id,
+                source='language_object'
             ),
             LanguageName(
                 name=self.id,
-                language_id=self.id
+                language_id=self.id,
+                source='language_object'
             )
         ]
 

@@ -1,0 +1,1 @@
+from .wiki_categories import create_wikicategories

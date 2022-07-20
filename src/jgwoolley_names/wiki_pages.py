@@ -14,7 +14,6 @@ def create_table(connection:sqlite3.Connection):
     connection.commit()
 
 def create_wikipages(connection:sqlite3.Connection, session:requests.Session):
-    #TODO: Removed url:str
     create_table(connection=connection)
     connection.row_factory = sqlite3.Row 
     cur = connection.cursor()
