@@ -3,26 +3,6 @@ import argparse
 from typing import List
 from .model import WikiRecord
 
-def create_argparser() -> argparse.ArgumentParser:
-    description='A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language'
-    parser = argparse.ArgumentParser(description)
-
-    parser.add_argument('--cache_name', metavar='c', dest='cache_name', default='names.db')
-    parser.add_argument('--backend', metavar='b', dest='backend', default='sqlite')
-    parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='sqlite:///names.db')
-    parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('w'), default=None)
-
-    subparsers = parser.add_subparsers(dest='command',help='sub-command help', required=True)
-    subparsers.add_parser('wikicategories', help='Parse wiki-categories')
-    subparsers.add_parser('wikipages', help='Parse wiki-categories')
-    wikicategories_out = subparsers.add_parser('wikicategories_out', help='output wiki-categories to csv')
-    wikicategories_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikicategories_out.csv')
-
-    wikipages_out = subparsers.add_parser('wikipages_out', help='output wiki-categories to csv')
-    wikipages_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikipages_out.csv')
-
-    return parser
-
 def read_categories(args:argparse.ArgumentParser) -> List[WikiRecord]:
     if args.categories is None:
         url = 'https://en.wiktionary.org/w/api.php'
@@ -113,15 +93,30 @@ def _create_wikicategories(args:argparse.ArgumentParser):
 #             for row in rows:
 #                 csv_writer.writerow(row)
 
+def create_argparser() -> argparse.ArgumentParser:
+    description='A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language'
+    parser = argparse.ArgumentParser(description)
+
+    parser.add_argument('--cache_name', metavar='c', dest='cache_name', default='names.db')
+    parser.add_argument('--backend', metavar='b', dest='backend', default='sqlite')
+    parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='sqlite:///names.db')
+    parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('w'), default=None)
+
+    subparsers = parser.add_subparsers(dest='command',help='sub-command help', required=True)
+    subparsers.add_parser('wikicategories', help='Parse wiki-categories').set_defaults(func=_create_wikicategories)
+    # subparsers.add_parser('wikipages', help='Parse wiki-categories').set_defaults(func=_create_wikipages)
+
+    # wikicategories_out = subparsers.add_parser('wikicategories_out', help='output wiki-categories to csv')
+    # wikicategories_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikicategories_out.csv')
+    # wikicategories_out.set_defaults(func=_wikicategories_out)
+
+    # wikipages_out = subparsers.add_parser('wikipages_out', help='output wiki-categories to csv')
+    # wikipages_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikipages_out.csv')
+    # wikipages_out.set_defaults(func=_wikipages_out)
+
+    return parser
+
 def main(args=None):
     parser = create_argparser()
     args = parser.parse_args(args)
-
-    commands = {
-        'wikicategories': _create_wikicategories,
-        # 'wikipages': _create_wikipages,
-        # 'wikicategories_out': _wikicategories_out,
-        # 'wikipages_out': _wikipages_out
-    }
-
-    commands[args.command](args)
+    args.func(args)

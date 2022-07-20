@@ -58,12 +58,38 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
 
     sql_session.commit()
 
-    for table in [Language, LanguageName]:
-        statement = sqlmodel.select(table)
-        results = sql_session.exec(statement)
-        result = results.first()
-        if result is None:
-            raise TypeError(f'No {table.__name__} results where inserted')
+    for name, language_id in [
+        ('Chichewa','nya'),
+        ('Greek','ell'),
+        ('Ilocano','ilo'),
+        ('Kapampangan','pam'),
+        ('Norman','nrf'),
+        ('Occitan','oci'),
+        ('Punjabi','pan'),
+        # ('Scottish Gaelic','gla'),
+        ('Slovene','slv'),
+        ('Waray-Waray','war'),
+        ('Germanic','deu'),
+        ('Hellenic','ell'),
+        ('Italic','ita'),
+        ('Japonic','jpn'),
+        ('Koreanic','kor'),
+        ('Malayo-Polynesian','poz'),
+        ('Norse','non'),
+        ('Frisian','fry'),
+        ('Abkhaz', 'abk')
+    ]:
+        sql_session.add(
+            LanguageName(
+                name=name,
+                language_id=language_id,
+                source=__name__
+            )
+        )
+
+    sql_session.commit()
+    
+
 
 def find_language_id(sql_session:sqlmodel.Session, name:str) -> str:
     statement = sqlmodel.select(LanguageName).where(LanguageName.name == name)

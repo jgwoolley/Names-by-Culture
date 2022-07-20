@@ -55,32 +55,14 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
             suggested_gender=None
         )
 
-        split_subcategory(context=context)
+        #TODO: Possibly reenable
+        # split_subcategory(context=context)
 
     return (category_type, parent_cmtitle, url)
 
 def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session, categories=List[WikiRecord]):
     write_languages_to_sql(sql_session=sql_session, session=session)
     actions = create_actions()
-
-    #Chichewa nya
-    #Greek ell
-    #Ilocano ilo
-    #Kapampangan pam
-    #Norman nrf
-    #Occitan oci
-    #Punjabi pan
-    #Scottish Gaelic gla
-    #Slovene slv
-    #Waray-Waray war
-    #Germanic deu
-    #Hellenic ell
-    #Italic ita
-    #Japonic jpn
-    #Koreanic kor
-    #Malayo-Polynesian poz
-    #Norse non
-    #Frisian fry
 
     for parent in categories:
         category_type, parent_cmtitle, url = process_parent(sql_session=sql_session, session=session, parent=parent)
