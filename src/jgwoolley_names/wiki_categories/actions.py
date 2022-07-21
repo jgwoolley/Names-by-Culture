@@ -62,11 +62,14 @@ def split_subcategory(context:ActionContext):
     sql_session.commit()
 
 def split_subcategory_default_value(context:ActionContext):
-    if context.category_info.pages < context.category_info.subcats:
-        return 4
+    #TODO: Figure out whether its nicer to have split to ever be suggested
+    # if context.category_info.pages < context.category_info.subcats:
+    #     return 4
 
-    if context.category_info.size > 1000 and isinstance(context.suggested_language, str) and context.suggested_language == 'eng':
-        return 4
+    # if context.category_info.size > 1000 and isinstance(context.suggested_language, str) and context.suggested_language == 'eng':
+    #     return 4
+    if context.category_info.pages == 0:
+        return 1
     return 0
 
 def double_split_subcategory(context:ActionContext):
@@ -88,18 +91,41 @@ def double_split_subcategory(context:ActionContext):
         )
         sql_session.add(parent)
 
+        if parent_cmtitle == 'Category:English_given_names':
+            english_cmtitle_tokens = get_cmtitle_tokens(parent)
+            print(english_cmtitle_tokens)
+            double_split_subcategory(ActionContext(
+                sql_session = context.sql_session,
+                session = context.session,
+                row = parent,
+                cmtitle_tokens = english_cmtitle_tokens,
+                category_info = query_category_info(url=context.url, title=parent_cmtitle, session=context.session),
+                suggested_language = find_suggested_language(context.sql_session, english_cmtitle_tokens),
+                suggested_gender = find_suggested_gender(context.sql_session, english_cmtitle_tokens),
+            ))
+            continue
+
         for child_cmtitle in query_subcategory(row.url, parent_cmtitle, session):
+            status = WikiRecordStatus.skipped
+
+            if 'male given names' in child_cmtitle or 'unisex given names' in child_cmtitle:
+                status = WikiRecordStatus.unevaluated
+
             child = WikiRecord(
                 cmtitle = child_cmtitle,
                 url = row.url,
                 category_type = row.category_type,
-                parent_cmtitle = parent_cmtitle
+                parent_cmtitle = parent_cmtitle,
+                status = status
             )
             sql_session.add(child)
 
     sql_session.commit()
 
 def double_split_subcategory_default_value(context:ActionContext):
+    if context.row.cmtitle == 'Category:Given names by language':
+        return 100
+
     return 0
 
 def update_subcategory(context:ActionContext):
@@ -217,7 +243,7 @@ def create_actions() -> List[Action]:
         Action(
             name='double_split_subcategory', 
             alt_names=['d'], 
-            description='Row is split twice for further processing', 
+            description='Row is split twice for further processing. This is really hard coded for given_names specifically', 
             action=double_split_subcategory,
             default_value_calculation=double_split_subcategory_default_value
         ),

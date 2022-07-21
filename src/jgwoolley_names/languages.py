@@ -77,7 +77,30 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
         ('Malayo-Polynesian','poz'),
         ('Norse','non'),
         ('Frisian','fry'),
-        ('Abkhaz', 'abk')
+        ('Abkhaz', 'abk'),
+        ('Aramaic', 'arc'),
+        ('Assyrian', 'syr'),
+        ('Nahuatl', 'nhe'),
+        ('Egyptian', 'egy'),
+        # ('Gandhari', 'pdg'),
+        ('Gaulish', 'xtg'),
+        ('Greenlandic', 'kal'),
+        ('Malay', 'ind'),
+        # ('Na\'vi', 'mis'),
+        ('Sami', 'sme'),
+        ('Novgorodian', 'rus'),
+        ('Saxon', 'osx'),
+        ('Proto-Brythonic', 'xpi'),
+        ('Proto-Celtic', 'mga'),
+        ('Proto-Germanic', 'deu'),
+        ('Proto-Norse', 'non'),
+        # ('Proto-Slavic', None),
+        ('Swahili', 'swa'),
+        # ('Tocharian', None),
+        ('Uyghur', 'uig'),
+        ('Vilamovian', 'wym'),
+        ('Westrobothnian','swe'),
+        ('Zazaki', 'zza')
     ]:
         sql_session.add(
             LanguageName(

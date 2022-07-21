@@ -11,6 +11,8 @@ echo "$project_name: Upgrading pip at $python_path"
 $python_path -m pip install --upgrade pip || exit 1
 
 echo "$project_name: Installing project at $src_path"
+
+#TODO: setup.py clean --all
 if $python_path -c "import os, subprocess; os.chdir('$src_path'); exit(subprocess.call(['$python_path', 'setup.py', 'install']));"
 then
     echo "$project_name: Make sure to activate your virtual environment: source $venv_path/bin/activate"

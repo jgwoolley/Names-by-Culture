@@ -76,11 +76,18 @@ def query_category_info(url:str, title:str, session:requests.Session) -> List[di
         'format': 'json'
     }
     data = query(url, params, session)
-
     data = data.get('query')
     if not isinstance(data, dict):
         return None
     
+    normalized_values = dict()
+    normalized = data.get('normalized')
+    if isinstance(normalized, list):
+        for normalized_value in normalized:
+            from_value = normalized_value['from']
+            to_value = normalized_value['to']
+            normalized_values[to_value] = from_value
+
     data = data.get('pages')
     if not isinstance(data, dict):
         return None
@@ -90,10 +97,14 @@ def query_category_info(url:str, title:str, session:requests.Session) -> List[di
             return None
         
         page_title = page.get('title')
-        if page_title != title:
-            continue
+
+        if page_title == title:
+            return page.get('categoryinfo')
         
-        return page.get('categoryinfo')
+        page_title = normalized_values[page_title]
+
+        if page_title == title:
+            return page.get('categoryinfo')
 
 # import wikitextparser as wtp
 # return wtp.parse(data)

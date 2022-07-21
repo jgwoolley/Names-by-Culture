@@ -23,9 +23,6 @@ class ActionContext:
     suggested_language:Optional[str]
     suggested_gender:Optional[str]
 
-    class Config:
-        arbitrary_types_allowed = True
-
 @dataclasses.dataclass
 class Action:
     name:str

@@ -1,3 +1,5 @@
+#TODO: change to models.py
+
 from sqlmodel.sql.expression import Select, SelectOfScalar
 
 SelectOfScalar.inherit_cache = True  # type: ignore

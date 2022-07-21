@@ -53,26 +53,21 @@ def _create_wikicategories(args:argparse.ArgumentParser):
 #         SQLModel.metadata.create_all(engine)
 #         with Session(engine) as sql_session:
 #             create_wikipages(sql_session=sql_session, session=session)
-   
 
-# def _wikicategories_out(args:argparse.ArgumentParser):
-#     from requests_cache import CachedSession
-#     from sqlmodel import SQLModel, create_engine, Session
-#     import csv 
+def _wikicategories_out(args:argparse.ArgumentParser):
+    import sqlite3, pandas, csv
 
-#     engine = create_engine(args.sqlite_database)
-#     SQLModel.metadata.create_all(engine)
-#     with Session(engine) as sql_session:
-#         connection.row_factory = sqlite3.Row 
-#         cur = connection.cursor()
-#         cur.execute('SELECT * FROM wiki_categories')
-#         rows = cur.fetchall()
-#         keys = rows[0].keys()
-#         with args.out as outfile:
-#             csv_writer = csv.writer(outfile)
-#             csv_writer.writerow(keys)
-#             for row in rows:
-#                 csv_writer.writerow(row)
+    sqlite_database = args.sqlite_database.split('sqlite:///')[-1]
+    conn = sqlite3.connect(sqlite_database)
+    df = pandas.read_sql_query('SELECT * FROM wikirecord', conn)
+    df.to_csv(args.out_csv)
+
+def _wikicategories_in(args:argparse.ArgumentParser):
+    import sqlite3, pandas, csv
+    df = pandas.read_csv(args.in_csv)
+    sqlite_database = args.sqlite_database.split('sqlite:///')[-1]    
+    conn = sqlite3.connect(sqlite_database)
+    df.to_sql('wikirecord', conn, if_exists='replace', index = False)
 
 # def _wikipages_out(args:argparse.ArgumentParser):
 #     from requests_cache import CachedSession
@@ -106,9 +101,13 @@ def create_argparser() -> argparse.ArgumentParser:
     subparsers.add_parser('wikicategories', help='Parse wiki-categories').set_defaults(func=_create_wikicategories)
     # subparsers.add_parser('wikipages', help='Parse wiki-categories').set_defaults(func=_create_wikipages)
 
-    # wikicategories_out = subparsers.add_parser('wikicategories_out', help='output wiki-categories to csv')
-    # wikicategories_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikicategories_out.csv')
-    # wikicategories_out.set_defaults(func=_wikicategories_out)
+    wikicategories_out = subparsers.add_parser('wikicategories_out', help='output wiki-categories to csv')
+    wikicategories_out.add_argument('--out_csv', metavar='o', dest='out_csv', type=argparse.FileType('w'), default='wikicategories.csv')
+    wikicategories_out.set_defaults(func=_wikicategories_out)
+
+    wikicategories_in = subparsers.add_parser('wikicategories_in', help='output wiki-categories to csv')
+    wikicategories_in.add_argument('--in_csv', metavar='i', dest='in_csv', type=argparse.FileType('r'), default='wikicategories.csv')
+    wikicategories_in.set_defaults(func=_wikicategories_in)
 
     # wikipages_out = subparsers.add_parser('wikipages_out', help='output wiki-categories to csv')
     # wikipages_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikipages_out.csv')
