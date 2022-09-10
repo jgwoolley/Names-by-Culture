@@ -19,9 +19,11 @@ class ActionContext:
     session:requests.Session
     row:WikiRecord
     cmtitle_tokens:List[str]
+    example_pages:List[str]
     category_info:CategoryInfo
     suggested_language:Optional[str]
     suggested_gender:Optional[str]
+    suggested_script:Optional[str] = None
 
 @dataclasses.dataclass
 class Action:

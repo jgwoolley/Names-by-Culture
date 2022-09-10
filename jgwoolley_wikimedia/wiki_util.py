@@ -34,17 +34,17 @@ def query_subcategory(url:str, cmtitle:str, session:requests.Session) -> List[di
     for result in query_category(url, params, 'categorymembers', session=session):
         yield result
 
-def query_category_pages(url:str, cmtitle:str) -> List[dict]:
-    params = {
-        'action': 'query',
-        'cmtitle': cmtitle,
-        'cmlimit': 'max',
-        'cmtype': 'page',
-        'list': 'categorymembers',
-        'format': 'json'
-    }
-    for result in query_category(url, params, 'categorymembers', session=session):
-        yield result
+# def query_category_pages(url:str, cmtitle:str) -> List[dict]:
+#     params = {
+#         'action': 'query',
+#         'cmtitle': cmtitle,
+#         'cmlimit': 'max',
+#         'cmtype': 'page',
+#         'list': 'categorymembers',
+#         'format': 'json'
+#     }
+#     for result in query_category(url, params, 'categorymembers', session=session):
+#         yield result
 
 def query_page_categories(url:str,titles:str, session:requests.Session) -> List[dict]:
     params = {
@@ -78,7 +78,7 @@ def query_category_info(url:str, title:str, session:requests.Session) -> List[di
     data = query(url, params, session)
     data = data.get('query')
     if not isinstance(data, dict):
-        return None
+        raise TypeError(f'{type(data)} not dict')
     
     normalized_values = dict()
     normalized = data.get('normalized')
@@ -90,12 +90,16 @@ def query_category_info(url:str, title:str, session:requests.Session) -> List[di
 
     data = data.get('pages')
     if not isinstance(data, dict):
-        return None
+        raise TypeError(f'{type(data)} not dict')
+
 
     for page in data.values():
         if not isinstance(page, dict):
-            return None
-        
+            raise TypeError(f'{type(data)} not dict')
+
+        if page.get('missing') is not None:
+            raise Exception(f'Value is missing: {title}')
+
         page_title = page.get('title')
 
         if page_title == title:
@@ -105,6 +109,9 @@ def query_category_info(url:str, title:str, session:requests.Session) -> List[di
 
         if page_title == title:
             return page.get('categoryinfo')
+
+    raise Exception(f'No values in pages')
+
 
 # import wikitextparser as wtp
 # return wtp.parse(data)

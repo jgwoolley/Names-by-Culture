@@ -23,22 +23,28 @@ from .models import (
 )
 from .actions_util import (
     get_cmtitle_tokens, 
-    find_suggested_language, 
     find_suggested_gender, 
+    find_suggested_language, 
     choose_language, 
+    choose_script_language,
     choose_gender
 )
 
 def ignore_row(context:ActionContext):
     row = context.row
     sql_session = context.sql_session
+    status_backup = row.status_backup
 
-    row.status = WikiRecordStatus.skipped
+    if row.status_backup == WikiRecordStatus.unevaluated:
+        row.status = WikiRecordStatus.skipped
+    else:
+        row.status = status_backup
+
     sql_session.commit()
 
 def ignore_row_default_value(context:ActionContext):
-    if context.category_info.size <= 10:
-        return 4
+    # if context.category_info.size <= 10:
+    #     return 4
     return 0
 
 def split_subcategory(context:ActionContext):
@@ -46,16 +52,16 @@ def split_subcategory(context:ActionContext):
     session:requests.Session = context.session
     row: WikiRecord = context.row
 
-    row.status = WikiRecordStatus.category
+    row.status = WikiRecordStatus.split_category
     sql_session.add(row)
     sql_session.commit()
 
-    for child_cmtitle in query_subcategory(row.url, row.cmtitle, session):
+    for child_cmtitle in query_subcategory(row.url, row.title, session):
         child = WikiRecord(
             cmtitle = child_cmtitle,
             url = row.url,
             category_type = row.category_type,
-            parent_cmtitle = row.cmtitle
+            parent_cmtitle = row.title
         )
         sql_session.add(child)
 
@@ -77,17 +83,17 @@ def double_split_subcategory(context:ActionContext):
     session:requests.Session = context.session
     row: WikiRecord = context.row
 
-    row.status = WikiRecordStatus.category
+    row.status = WikiRecordStatus.split_category
     sql_session.add(row)
     sql_session.commit()
 
-    for parent_cmtitle in query_subcategory(row.url, row.cmtitle, session):
+    for parent_cmtitle in query_subcategory(row.url, row.title, session):
         parent = WikiRecord(
             cmtitle = parent_cmtitle,
             url = row.url,
             category_type = row.category_type,
-            status = WikiRecordStatus.category,
-            parent_cmtitle = row.cmtitle
+            status = WikiRecordStatus.split_category,
+            parent_cmtitle = row.title
         )
         sql_session.add(parent)
 
@@ -123,7 +129,7 @@ def double_split_subcategory(context:ActionContext):
     sql_session.commit()
 
 def double_split_subcategory_default_value(context:ActionContext):
-    if context.row.cmtitle == 'Category:Given names by language':
+    if context.row.title == 'Category:Given names by language':
         return 100
 
     return 0
@@ -134,16 +140,21 @@ def update_subcategory(context:ActionContext):
     suggested_language:Optional[str] = context.suggested_language
     suggested_gender:Optional[str] = context.suggested_gender
 
-    language_id = choose_language(sql_session=sql_session, cmtitle=row.cmtitle, suggested_value=suggested_language)
+    language_id = choose_language(sql_session=sql_session, cmtitle=row.title, suggested_value=suggested_language)
     if language_id is None:
         return
-    gender = choose_gender(sql_session=sql_session, cmtitle=row.cmtitle, suggested_value=suggested_gender)
+    
+    suggested_script = choose_script_language(context=context)
+    if suggested_script is None:
+        return
+    gender = choose_gender(sql_session=sql_session, cmtitle=row.title, suggested_value=suggested_gender)
     gender = Gender[gender]
     if gender is None:
         return
     row.language_id = language_id
     row.gender = gender
-    row.status = WikiRecordStatus.page
+    row.status = WikiRecordStatus.category
+    row.language_script= suggested_script 
 
     sql_session.commit() 
 
@@ -155,6 +166,7 @@ def guess_subcategory(context:ActionContext):
     row:WikiRecord = context.row
     suggested_language:str = context.suggested_language
     suggested_gender:str = context.suggested_gender
+    suggested_script:str = context.suggested_script
 
     if not isinstance(suggested_language, str):
         print(f'Unable to guess language for {row}')
@@ -164,9 +176,14 @@ def guess_subcategory(context:ActionContext):
         print(f'Unable to guess gender for {row}')
         return
 
+    if not isinstance(suggested_script, str):
+        print(f'Unable to guess suggested_script for {row}')
+        return
+
     row.language_id = suggested_language
+    row.language_script = suggested_script
     row.gender = suggested_gender
-    row.status = WikiRecordStatus.page
+    row.status = WikiRecordStatus.category
 
     sql_session.commit() 
 
@@ -198,17 +215,17 @@ def add_language(context:ActionContext):
         if value == 'exit':
             return
 
-        if len(value) == 0:
+        if len(value) == 0 or len(value) > 3:
             continue
         
         language_id = value
-        statement = sqlmodel.select(Language).where(Language.id == language_id)
-        results = sql_session.exec(statement)
-        result = results.first()
+        # statement = sqlmodel.select(Language).where(Language.id == language_id)
+        # results = sql_session.exec(statement)
+        # result = results.first()
 
-        if result == None:
-            language_id=None
-            continue
+        # if result == None:
+        #     language_id=None
+        #     continue
 
     print(f'Adding language reference {name} for {language_id}')
     ref_data = LanguageName(
@@ -220,9 +237,10 @@ def add_language(context:ActionContext):
     sql_session.commit()
 
 def add_language_default_value(context:ActionContext):
-    if isinstance(context.suggested_language, str) and len(context.suggested_language) > 0:
-        return 1
-    return 0
+    suggested_language = context.suggested_language
+    cond = isinstance(suggested_language, str) and len(suggested_language) > 0
+    val = 0 if cond else 1
+    return val
 
 def create_actions() -> List[Action]:
     actions:List[Action] = [
@@ -298,7 +316,11 @@ def find_action(actions:List[Action], input_name:str) -> Optional[Action]:
     return None
 
 def guess_action(actions:List[Action], context:ActionContext) -> Optional[Action]:
-    return sorted(actions, key=lambda x: x.calculate_default_value(context))[-1]
+    if context.row.status == WikiRecordStatus.redo:
+        return find_action(actions, 'guess_subcategory')
+
+    results = sorted(actions, key=lambda x: x.calculate_default_value(context))
+    return results[-1]
 
 def create_actions_guide(actions:List[Action], default_action:Action):
     return f'Please choose between {[x.name for x in actions]}\ndefault for empty: {default_action.name}\n'

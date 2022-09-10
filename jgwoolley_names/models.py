@@ -26,7 +26,7 @@ class LanguageName(SQLModel, table=True):
     #     assert v.isalpha() == True, 'Test'
     #     return v.lower()
 
-class Language(SQLModel, table=True):
+class Language(SQLModel, table=True): 
     id : str = Field(primary_key=True)
     part2b : Optional[str]
     part2t : Optional[str]
@@ -57,11 +57,18 @@ class Language(SQLModel, table=True):
             )
         ]
 
+class LanguageScriptRange(SQLModel, table=True): 
+    min : int = Field(primary_key=True)
+    max: int
+    name: str
+
 class WikiRecordStatus(enum.Enum):
     unevaluated = "unevaluated"
     skipped = "skipped"
     page = "page"
     category = "category"
+    split_category = "split_category"
+    redo = "redo"
 
 class Gender(enum.Enum):
     unisex = "unisex"
@@ -70,10 +77,13 @@ class Gender(enum.Enum):
 
 class WikiRecord(SQLModel, table=True):
     id: Optional[int] = Field(primary_key=True)
-    cmtitle: str
+    title: str
+    name: Optional[str] #TODO: This should be a normalized name, rather than the real title of article
     url:str
     category_type: str
     status: WikiRecordStatus = Field(sa_column=Column(Enum(WikiRecordStatus), default=WikiRecordStatus.unevaluated))
+    status_backup: WikiRecordStatus = Field(sa_column=Column(Enum(WikiRecordStatus), default=WikiRecordStatus.unevaluated))
     language_id : Optional[str] = None
+    language_script: Optional[str] = None
     gender: Gender = Field(sa_column=Column(Enum(Gender), default=Gender.unisex))
     parent_cmtitle: Optional[str] = None

@@ -1,5 +1,6 @@
 import logging, requests, sqlmodel
 
+from itertools import islice
 from typing import Dict, List, Optional, Tuple
 from jgwoolley_wikimedia import (
     query_subcategory, 
@@ -9,9 +10,11 @@ from jgwoolley_wikimedia import (
 )
 
 from ..languages import write_languages_to_sql, find_language_id
-from ..model import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
+from ..scripts import write_scripts_to_sql, find_suggested_script
+from ..models import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
 
 from .models import CategoryInfo, Action, ActionContext
+
 from .actions import (
     get_cmtitle_tokens,
     find_suggested_gender,
@@ -27,18 +30,18 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
         raise Exception(f'Given category isn\'t WikiRecord: {type(parent)}')
 
     category_type = parent.category_type
-    parent_cmtitle = parent.cmtitle
+    parent_cmtitle = parent.title
     url = parent.url
 
     for k, v in {'url': url, 'category_type':category_type, 'cmtitle': parent_cmtitle}.items():
         if v is None:
             raise TypeError(f'{k} must not be none for record: {parent}')
 
-    statement = sqlmodel.select(WikiRecord).where(WikiRecord.cmtitle == parent_cmtitle)
+    statement = sqlmodel.select(WikiRecord).where(WikiRecord.title == parent_cmtitle)
     results = sql_session.exec(statement)
     if not results.first():
         row = WikiRecord(
-            cmtitle = parent_cmtitle,
+            title = parent_cmtitle,
             url = url,
             category_type = category_type
         )
@@ -50,6 +53,7 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
             session=session,
             row=row,
             cmtitle_tokens=get_cmtitle_tokens(row),
+            example_pages=[],
             category_info=None,
             suggested_language=None,
             suggested_gender=None
@@ -62,13 +66,14 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
 
 def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session, categories=List[WikiRecord]):
     write_languages_to_sql(sql_session=sql_session, session=session)
+    write_scripts_to_sql(sql_session=sql_session, session=session)
     actions = create_actions()
 
     for parent in categories:
         category_type, parent_cmtitle, url = process_parent(sql_session=sql_session, session=session, parent=parent)
 
         while True:
-            statement = sqlmodel.select(WikiRecord).where(WikiRecord.status == WikiRecordStatus.unevaluated).where(WikiRecord.category_type == category_type)
+            statement = sqlmodel.select(WikiRecord).where(WikiRecord.status == WikiRecordStatus.unevaluated or WikiRecord.status == WikiRecordStatus.redo).where(WikiRecord.category_type == category_type)
             results = sql_session.exec(statement)
 
             row:WikiRecord = results.first()
@@ -76,27 +81,38 @@ def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session
                 break
 
             cmtitle_tokens = get_cmtitle_tokens(row)
-            suggested_gender = find_suggested_gender(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
-            suggested_language = find_suggested_language(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
+            suggested_gender = row.gender.value if row.gender else find_suggested_gender(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
+            suggested_language = row.language_id if row.language_id else find_suggested_language(sql_session=sql_session, cmtitle_tokens=cmtitle_tokens)
+            category_info = CategoryInfo(**query_category_info(url=url, title=row.title, session=session))
 
-            category_info = CategoryInfo(**query_category_info(url=url, title=row.cmtitle, session=session))
+            example_pages = [x for x in islice(query_category_pages(url=url, cmtitle=row.title, session=session), 5)]
+            example_subcategories = [x for x in islice(query_subcategory(url=url, cmtitle=row.title, session=session), 5)]
+
+            #TODO: Is it assuming too much that all the subcategories will be of the same script?
+            suggested_script = row.language_script if row.language_script else find_suggested_script(sql_session=sql_session, names=example_pages)
+            if suggested_script is None:
+                suggested_script = suggested_language
 
             context = ActionContext(
                 sql_session=sql_session,
                 session=session,
                 row=row,
                 cmtitle_tokens=cmtitle_tokens,
+                example_pages=example_pages,
                 category_info=category_info,
                 suggested_language=suggested_language,
-                suggested_gender=suggested_gender
+                suggested_gender=suggested_gender,
+                suggested_script = suggested_script
             )
 
             default_action = guess_action(actions=actions, context=context)
             actions_guide = create_actions_guide(actions=actions, default_action=default_action)
 
             print(f'{" ".join(cmtitle_tokens)} [category_type=\"{row.category_type}\"]')
-            print(f'\"suggested_language=\"{suggested_language}\", suggested_gender=\"{suggested_gender}\"')
+            print(f'\"suggested_language=\"{suggested_language}\", \"suggested_script\"=\"{suggested_script}\", suggested_gender=\"{suggested_gender}\"')
             print(f'category_info={category_info}')
+            print(f'example_pages={example_pages}')
+            print(f'example_subcategories={example_subcategories}')
 
             action:Action = None
             while action is None:

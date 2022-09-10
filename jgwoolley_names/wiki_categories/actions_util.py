@@ -34,8 +34,8 @@ def find_suggested_gender(sql_session:sqlmodel.Session, cmtitle_tokens:List[str]
 
     return suggested_values[-1]
 
-def choose_language(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:Optional[str]) -> str:
-    input_guide = f'Please select a language for {cmtitle} {suggested_value} or type \"exit\"\n'
+def choose_language(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:Optional[str], guide_type:str='language') -> str:
+    input_guide = f'Please select a {guide_type} for \"{cmtitle}\" \"{suggested_value}\" or type \"exit\"\n'
 
     print(f'{cmtitle}: {suggested_value}')
     language_id=None
@@ -54,8 +54,11 @@ def choose_language(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:O
 
     return language_id
 
+def choose_script_language(context:ActionContext):
+    return choose_language(sql_session=context.sql_session, cmtitle=context.row.cmtitle, suggested_value=context.suggested_script)
+
 def choose_gender(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:Optional[str]) -> str:
-    input_guide = f'Please select a gender for {cmtitle} {suggested_value} or type \"exit\"\n'
+    input_guide = f'Please select a gender for \"{cmtitle}\" \"{suggested_value}\" or type \"exit\"\n'
 
     print(f'{cmtitle}: {suggested_value}')
     value=None

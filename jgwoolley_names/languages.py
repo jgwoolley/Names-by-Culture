@@ -100,7 +100,37 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
         ('Uyghur', 'uig'),
         ('Vilamovian', 'wym'),
         ('Westrobothnian','swe'),
-        ('Zazaki', 'zza')
+        ('Zazaki', 'zza'),
+        ('Aromanian', 'rup'),
+        ('Bura', 'bwr'),
+        ('Buryat', 'bua'),
+        ('Tamazight', 'ber'),
+        ('Franconian', 'deu'),
+        ('Demotic', 'cop'),
+        ('Gandhari', 'pgd'),
+        ('Jamtish', 'swe'),
+        ('Kaxuyana', 'waw'),
+        ('Kom', 'bkm'),
+        ('Konkani', 'kok'),
+        ('Kyrgyz', 'kir'),
+        ('Limburgish', 'lim'),
+        ('Lishana', 'lsd'),
+        ('Sorbian', 'wen'),
+        ('Nepali', 'nep'),
+        ('Slavonic', 'chu'),
+        ('Philistine', 'mis'),
+        ('Prakrit', 'pra'),
+        ('Proto-Hellenic', 'ell'),
+        ('Proto-Iranian', 'fas'),
+        ('Romani', 'rom'),
+        ('Rwanda-Rundi', 'kin'),
+        ('Sinhalese', 'sin'),
+        ('Solon', 'evn'),
+        ('Altai', 'tut'),
+        ('Tocharian', 'txb'),
+        ('Tokelauan', 'tkl'),
+        ('Tuvan', 'tyv')
+
     ]:
         sql_session.add(
             LanguageName(

@@ -14,4 +14,4 @@ from .model import (
     WikiRecord
 )
 
-from .wiki_categories import create_wikicategories
+from .wiki_categories.wiki_categories import create_wikicategories
