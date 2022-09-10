@@ -1,4 +1,4 @@
 id,title,name,url,category_type,status,status_backup,language_id,language_script,gender,parent_cmtitle
-4546,Chesús,Chesús,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,arg,Latin,Gender.male,Category:Aragonese male given names
-4547,Chorche,Chorche,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,arg,Latin,Gender.male,Category:Aragonese male given names
-4548,Chuan,Chuan,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,arg,Latin,Gender.male,Category:Aragonese male given names
+,Chesús,Chesús,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,arg,Latin,Gender.male,Category:Aragonese male given names
+,Chorche,Chorche,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,arg,Latin,Gender.male,Category:Aragonese male given names
+,Chuan,Chuan,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,arg,Latin,Gender.male,Category:Aragonese male given names

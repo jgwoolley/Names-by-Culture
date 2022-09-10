@@ -1,7 +1,7 @@
 id,title,name,url,category_type,status,status_backup,language_id,language_script,gender,parent_cmtitle
-39205,Булат,Булат,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
-39206,Габдулла,Габдулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
-39207,Гариф,Гариф,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
-39208,Гарифулла,Гарифулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
-39209,Гобәйдулла,Гобәйдулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
-39210,Нури,Нури,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Булат,Булат,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Габдулла,Габдулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Гариф,Гариф,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Гарифулла,Гарифулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Гобәйдулла,Гобәйдулла,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names
+,Нури,Нури,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,tat,Cyrillic,Gender.male,Category:Tatar male given names

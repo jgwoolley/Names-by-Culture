@@ -1,6 +1,6 @@
 id,title,name,url,category_type,status,status_backup,language_id,language_script,gender,parent_cmtitle
-33422,Dümăs,Dümăs,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,pox,Latin,Gender.male,Category:Polabian male given names
-33423,Maixăl,Maixăl,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,pox,Latin,Gender.male,Category:Polabian male given names
-33424,Niklot,Niklot,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,pox,Latin,Gender.male,Category:Polabian male given names
-33425,Plötüs,Plötüs,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,pox,Latin,Gender.male,Category:Polabian male given names
-33426,Åns,Åns,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,WikiRecordStatus.unevaluated,pox,Latin,Gender.male,Category:Polabian male given names
+,Dümăs,Dümăs,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,pox,Latin,Gender.male,Category:Polabian male given names
+,Maixăl,Maixăl,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,pox,Latin,Gender.male,Category:Polabian male given names
+,Niklot,Niklot,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,pox,Latin,Gender.male,Category:Polabian male given names
+,Plötüs,Plötüs,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,pox,Latin,Gender.male,Category:Polabian male given names
+,Åns,Åns,https://en.wiktionary.org/w/api.php,given_names,WikiRecordStatus.page,,pox,Latin,Gender.male,Category:Polabian male given names

@@ -44,10 +44,11 @@ def _create_wikicategories(args:argparse.ArgumentParser):
             if v is None:
                 raise TypeError(f'{k} must not be none for record: {parent}')
 
-    with CachedSession(cache_name=args.cache_name, backend=args.backend) as session, Session(engine) as sql_session:
+    with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         engine = create_engine(args.sqlite_database)
-        SQLModel.metadata.create_all(engine)
-        create_wikicategories(sql_session=sql_session, session=session, categories=categories)
+        with Session(engine) as sql_session:
+            SQLModel.metadata.create_all(engine)
+            create_wikicategories(sql_session=sql_session, session=session, categories=categories)
 
 models = {cls.__name__: cls for cls in [LanguageName, Language, LanguageScriptRange, WikiRecord]}
 
@@ -68,7 +69,7 @@ def _sql_to_csv(args:argparse.ArgumentParser):
         statement = select(cls)
         with tqdm(sql_session.exec(statement), desc='in') as progress:
             for idx, row in enumerate(progress):
-                writer.writerow(row.dict())
+                writer.writerow(row.dict(row.dict(exclude={'id', 'status_backup'})))
 
 def _csv_to_sql(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
@@ -124,13 +125,14 @@ def _write_pages(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
     from sqlmodel import SQLModel, create_engine, Session, select
     from tqdm import tqdm
-    import os, csv
+    import os, csv, json
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         engine = create_engine(args.sqlite_database)
         SQLModel.metadata.create_all(engine)
         with Session(engine) as sql_session:
             statement = select(WikiRecord).where(WikiRecord.status == WikiRecordStatus.page)
+            metadata = []
             language_ids = set()
             category_types = set()
             with tqdm(sql_session.exec(statement), desc='find_language_ids') as progress:
@@ -141,6 +143,7 @@ def _write_pages(args:argparse.ArgumentParser):
             with tqdm(language_ids, desc='languages') as progress:
                 for language_id in progress:
                     progress.set_description_str(language_id)
+                    metadatum = dict()
                     for category_type in category_types:
                         statement = select(WikiRecord).where(WikiRecord.status == WikiRecordStatus.page)
                         statement = statement.where(WikiRecord.language_id == language_id)
@@ -150,11 +153,31 @@ def _write_pages(args:argparse.ArgumentParser):
                         os.makedirs(path, exist_ok=True)            
                         path = os.path.join(path, category_type+'.csv')
 
+                        count = 0
                         with open(path, 'w') as file:
                             writer = csv.DictWriter(file, WikiRecord.__fields__.keys())
                             writer.writeheader()
                             for idx, row in enumerate(sql_session.exec(statement)):
-                                writer.writerow(row.dict())
+                                writer.writerow(row.dict(exclude={'id', 'status_backup'}))
+                                count+=1
+                        metadatum[category_type] = count
+                    path = os.path.join(args.out_dir, language_id, 'metadata.json')
+                    metadatum['total'] = sum(metadatum.values())
+                    metadatum['language_id'] = language_id
+                    with open(path, 'w') as file:
+                        json.dump(metadatum, file)
+                    metadata.append(metadatum)
+            
+            path = os.path.join(args.out_dir, 'metadata.csv')
+            with open(path, 'w') as file:
+                keys = [x for x in category_types]
+                keys.append('total')
+                keys.append('language_id')
+                writer = csv.DictWriter(file, keys)
+                writer.writeheader()
+                metadata = sorted(metadata, key = lambda x: x['total'], reverse=True)
+                for metadatum in metadata:
+                    writer.writerow(metadatum)
 
 
 def create_argparser() -> argparse.ArgumentParser:
