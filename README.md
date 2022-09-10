@@ -1,13 +1,13 @@
 # Names-by-Culture
-A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language
+A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language from [MediaWiki](https://en.wikipedia.org/wiki/MediaWiki) ([Wiktionary](https://en.wikipedia.org/wiki/Wiktionary) or [Wikipedia](https://en.wikipedia.org/wiki/Wikipedia))
 
-- Current pages are located in [pages](pages). See name counts here: [metadata.csv](See pages/metadata.csv)
+- Current pages are located in [pages](pages). See name counts here: [metadata.csv](pages/metadata.csv)
 - These pages were collected from the following file: [wikicategories.csv](wikicategories.csv)
 
 
 # Motivation
 
-When searching for Surname / Given Name databases, the only structured databases I found were either paid for or were from census data and did not include languages of origin. After attempting to pull data from [Wikipedia](https://en.wikipedia.org/wiki/Category:Surnames_by_language), however I found that [Wikitionary](https://en.wiktionary.org/wiki/Category:Given_names_by_language)'s list of last names was better.
+When searching for Surname / Given Name databases, the only structured databases I found were either paid for or were from census data and did not include languages of origin. After attempting to pull data from [Wikipedia](https://en.wikipedia.org/wiki/Category:Surnames_by_language), however I found that [Wikitionary](https://en.wiktionary.org/wiki/Category:Given_names_by_language)'s list of names were structured a bit better.
 
 I realized that the subcategories would need some manual review to match them with languages. I found the [ISO 639-3](https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3.tab) specification was extremly close to the list of languages found on Wikitionary.
 
@@ -17,7 +17,7 @@ I also saw a mix of Latin/Cyrillic names in some languages, and thus sought to i
 
 # How to run
 
-1. I have created a [setup script](setup.sh) that can be run to create a [virtual environment](https://docs.python.org/3/library/venv.html), and downloads the relevant dependencies. This setup script only works on Linux.
+1. I have created a [setup script](setup.sh) that can be run to create a [virtual environment (venv)](https://docs.python.org/3/library/venv.html), and downloads the relevant dependencies. This setup guide is written to work on Linux, however, consult the venv documentation to get it working on the operating system of your choice.
 
 ```console
 foo@bar:~$ sh setup.sh
@@ -34,7 +34,7 @@ usage: A Python library to pull down Surnames, Given Names, and Place Names by C
 A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language
 ```
 
-3. You can import the default records with the following:
+3. You can import the [default records](wikicategories.csv) with the following:
 
 ```console
 foo@bar:~$ .venv/bin/python -m jgwoolley_names in --in wikicategories.csv --model WikiRecord
