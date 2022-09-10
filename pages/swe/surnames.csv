@@ -1,0 +1,530 @@
+id,title,name,url,category_type,status,status_backup,language_id,language_script,gender,parent_cmtitle
+97044,Abrahamsson,Abrahamsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97045,Alexandersson,Alexandersson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97046,Alfvén,Alfvén,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97047,Andersson,Andersson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97048,Andreasson,Andreasson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97049,André,André,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97050,Apell,Apell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97051,Arvidsson,Arvidsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97052,Ask,Ask,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97053,Axelsson,Axelsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97054,Backström,Backström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97055,Bengtsson,Bengtsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97056,Berg,Berg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97057,Berggren,Berggren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97058,Berglund,Berglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97059,Bergman,Bergman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97060,Bergqvist,Bergqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97061,Bergström,Bergström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97062,Bergvall,Bergvall,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97063,Bernadotte,Bernadotte,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97064,Berzelius,Berzelius,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97065,Bildt,Bildt,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97066,Björk,Björk,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97067,Björklund,Björklund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97068,Björkman,Björkman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97069,Björn,Björn,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97070,Blom,Blom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97071,Blomqvist,Blomqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97072,Blomstrand,Blomstrand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97073,Bolund,Bolund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97074,Borg,Borg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97075,Boström,Boström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97076,Brovall,Brovall,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97077,Burman,Burman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97078,Bäckström,Bäckström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97079,Bååth,Bååth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97080,Börjeson,Börjeson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97081,Carlsson,Carlsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97082,Cederström,Cederström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97083,Cronström,Cronström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97084,Dahl,Dahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97085,Dahlberg,Dahlberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97086,Dahlbäck,Dahlbäck,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97087,Dahlström,Dahlström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97088,Danielsson,Danielsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97089,Davidsson,Davidsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97090,Ehrling,Ehrling,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97091,Ek,Ek,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97092,Ekberg,Ekberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97093,Ekdahl,Ekdahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97094,Ekelöf,Ekelöf,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97095,Ekerlid,Ekerlid,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97096,Eklund,Eklund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97097,Eklöf,Eklöf,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97098,Ekström,Ekström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97099,Eliasson,Eliasson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97100,Englund,Englund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97101,Engström,Engström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97102,Ericsson,Ericsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97103,Eriksson,Eriksson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97104,Erlandsson,Erlandsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97105,Erlund,Erlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97106,Fagerlund,Fagerlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97107,Fallström,Fallström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97108,Fjäll,Fjäll,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97109,Forsberg,Forsberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97110,Forssell,Forssell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97111,Fransson,Fransson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97112,Fredriksson,Fredriksson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97113,Frisk,Frisk,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97114,Glad,Glad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97115,Grafström,Grafström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97116,Granestrand,Granestrand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97117,Grönholm,Grönholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97118,Gunnarsson,Gunnarsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97119,Gustafsson,Gustafsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97120,Gustavsson,Gustavsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97121,Göransson,Göransson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97122,Hammare,Hammare,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97123,Hansson,Hansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97124,Haverling,Haverling,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97125,Hedborg,Hedborg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97126,Hedenskog,Hedenskog,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97127,Hedlund,Hedlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97128,Hedman,Hedman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97129,Hellström,Hellström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97130,Henriksson,Henriksson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97131,Hermansson,Hermansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97132,Hjelmqvist,Hjelmqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97133,Holm,Holm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97134,Holmberg,Holmberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97135,Holmgren,Holmgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97136,Holmquist,Holmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97137,Holmström,Holmström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97138,Hulth,Hulth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97139,Hyltenstam,Hyltenstam,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97140,Håkansson,Håkansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97141,Hård,Hård,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97142,Högberg,Högberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97143,Höglund,Höglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97144,Höxter,Höxter,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97145,Isaksson,Isaksson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97146,Ishizaki,Ishizaki,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97147,Ivarsson,Ivarsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97148,Jacobsson,Jacobsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97149,Jakobsson,Jakobsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97150,Jansson,Jansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97151,Johansson,Johansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97152,Johnson,Johnson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97153,Johnsson,Johnsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97154,Jonasson,Jonasson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97155,Jonsson,Jonsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97156,Josefsson,Josefsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97157,Jäderberg,Jäderberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97158,Jönsson,Jönsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97159,Karlsson,Karlsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97160,Kindstrand,Kindstrand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97161,Kjellberg,Kjellberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97162,Kjellström,Kjellström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97163,Kvist,Kvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97164,Kvisth,Kvisth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97165,Kwist,Kwist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97166,Lagerkvist,Lagerkvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97167,Lagerlöf,Lagerlöf,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97168,Larsson,Larsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97169,Leander,Leander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97170,Lind,Lind,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97171,Lindberg,Lindberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97172,Lindblad,Lindblad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97173,Lindblom,Lindblom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97174,Lindgren,Lindgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97175,Lindholm,Lindholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97176,Lindqvist,Lindqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97177,Lindström,Lindström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97178,Lindén,Lindén,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97179,Linnaeus,Linnaeus,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97180,Ljungberg,Ljungberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97181,Ljungqvist,Ljungqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97182,Lundberg,Lundberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97183,Lundgren,Lundgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97184,Lundh,Lundh,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97185,Lundin,Lundin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97186,Lundqvist,Lundqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97187,Lundström,Lundström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97188,Löfgren,Löfgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97189,Magnusson,Magnusson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97190,Malin,Malin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97191,Malmquist,Malmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97192,Malmström,Malmström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97193,Mankell,Mankell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97194,Markström,Markström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97195,Martinsson,Martinsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97196,Matsson,Matsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97197,Mattsson,Mattsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97198,Månsson,Månsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97199,Mårtensson,Mårtensson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97200,Nilsson,Nilsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97201,Nobel,Nobel,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97202,Norberg,Norberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97203,Nordin,Nordin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97204,Nordström,Nordström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97205,Norén,Norén,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97206,Nyberg,Nyberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97207,Nyman,Nyman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97208,Nyström,Nyström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97209,Olofsson,Olofsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97210,Olsson,Olsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97211,Palm,Palm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97212,Palme,Palme,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97213,Palmquist,Palmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97214,Palmqvist,Palmqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97215,Parkstad,Parkstad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97216,Pehrson,Pehrson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97217,Pehrsson,Pehrsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97218,Person,Person,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97219,Persson,Persson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97220,Petersson,Petersson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97221,Pettersson,Pettersson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97222,Quist,Quist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97223,Quisth,Quisth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97224,Qvist,Qvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97225,Qvisth,Qvisth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97226,Qwist,Qwist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97227,Rangström,Rangström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97228,Rask,Rask,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97229,Renström,Renström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97230,Ribbing,Ribbing,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97231,Ringberg,Ringberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97232,Ros,Ros,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97233,Rosberg,Rosberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97234,Rosengren,Rosengren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97235,Rosenqvist,Rosenqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97236,Rothschild,Rothschild,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97237,Rudolfsson,Rudolfsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97238,Rydberg,Rydberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97239,Ryttberg,Ryttberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97240,Råberg,Råberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97241,Rådström,Rådström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97242,Sahlin,Sahlin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97243,Samuelsson,Samuelsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97244,Sandberg,Sandberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97245,Sandell,Sandell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97246,Sandström,Sandström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97247,Schyman,Schyman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97248,Sellström,Sellström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97249,Sievert,Sievert,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97250,Sjöberg,Sjöberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97251,Sjögren,Sjögren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97252,Sjökvist,Sjökvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97253,Sjölund,Sjölund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97254,Sjöquist,Sjöquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97255,Sjöqvist,Sjöqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97256,Skarsgård,Skarsgård,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97257,Skog,Skog,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97258,Skoglund,Skoglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97259,Spjuth,Spjuth,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97260,Spångberg,Spångberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97261,Staxäng,Staxäng,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97262,Stenqvist,Stenqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97263,Stenström,Stenström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97264,Strand,Strand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97265,Strid,Strid,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97266,Ström,Ström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97267,Strömberg,Strömberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97268,Ståhl,Ståhl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97269,Ståhlbrand,Ståhlbrand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97270,Sundberg,Sundberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97271,Sundkvist,Sundkvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97272,Sundqvist,Sundqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97273,Sundström,Sundström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97274,Svanstedt,Svanstedt,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97275,Svanström,Svanström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97276,Svedberg,Svedberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97277,Svensson,Svensson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97278,Svinhufvud,Svinhufvud,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97279,Söder,Söder,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97280,Söderberg,Söderberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97281,Södergren,Södergren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97282,Söderström,Söderström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97283,Thunberg,Thunberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97284,Thörnqvist,Thörnqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97285,Torvalds,Torvalds,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97286,Tunberg,Tunberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97287,Wahlroos,Wahlroos,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97288,Wahlström,Wahlström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97289,Wallander,Wallander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97290,Wallin,Wallin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97291,Westerberg,Westerberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97292,Westman,Westman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97293,Wickman,Wickman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97294,Widforss,Widforss,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97295,Wiktorin,Wiktorin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97296,Ärlig,Ärlig,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97297,Åberg,Åberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97298,Ågren,Ågren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97299,Åhlström,Åhlström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97300,Åkerblom,Åkerblom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97301,Åkerlund,Åkerlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97302,Åkerman,Åkerman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97303,Åkerström,Åkerström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97304,Åkesson,Åkesson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97305,Ångström,Ångström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97306,Åslund,Åslund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97307,Åström,Åström,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97308,Öberg,Öberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97309,Östberg,Östberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97310,Österberg,Österberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97311,Österman,Österman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97312,Östlund,Östlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+97313,Östman,Östman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:Swedish surnames
+120719,Aberg,Aberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120720,Acree,Acree,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120721,Ahlberg,Ahlberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120722,Ahlfors,Ahlfors,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120723,Ahlgren,Ahlgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120724,Ahlquist,Ahlquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120725,Ahlstrom,Ahlstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120726,Alfven,Alfven,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120727,Alfvén,Alfvén,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120728,Algren,Algren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120729,Anderberg,Anderberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120730,Andersson,Andersson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120731,Anfinson,Anfinson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120732,Ask,Ask,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120733,Aslin,Aslin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120734,Backlund,Backlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120735,Backstrom,Backstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120736,Bank,Bank,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120737,Barkdoll,Barkdoll,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120738,Barkdull,Barkdull,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120739,Belfrage,Belfrage,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120740,Berglund,Berglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120741,Bergquist,Bergquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120742,Bergstedt,Bergstedt,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120743,Bergstrom,Bergstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120744,Berndtson,Berndtson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120745,Berntson,Berntson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120746,Bertelson,Bertelson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120747,Bjorklund,Bjorklund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120748,Bjorkman,Bjorkman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120749,Blom,Blom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120750,Blomberg,Blomberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120751,Blomgren,Blomgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120752,Blomquist,Blomquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120753,Bloomquist,Bloomquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120754,Bohlin,Bohlin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120755,Borjeson,Borjeson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120756,Bostrom,Bostrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120757,Bro,Bro,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120758,Broden,Broden,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120759,Brostrom,Brostrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120760,Bystrom,Bystrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120761,Carlson,Carlson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120762,Cederberg,Cederberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120763,Clarin,Clarin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120764,Cronholm,Cronholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120765,Dahl,Dahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120766,Dahlgren,Dahlgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120767,Dahlman,Dahlman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120768,Dahlquist,Dahlquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120769,Dahlstrom,Dahlstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120770,Eckstrom,Eckstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120771,Edberg,Edberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120772,Edblad,Edblad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120773,Edlund,Edlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120774,Edman,Edman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120775,Edstrom,Edstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120776,Ekberg,Ekberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120777,Ekdahl,Ekdahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120778,Ekholm,Ekholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120779,Eklund,Eklund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120780,Ekstrand,Ekstrand,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120781,Ekstrom,Ekstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120782,Elmquist,Elmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120783,Emanuelson,Emanuelson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120784,Engberg,Engberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120785,Engdahl,Engdahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120786,Engholm,Engholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120787,Englund,Englund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120788,Engstrom,Engstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120789,Enquist,Enquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120790,Erickson,Erickson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120791,Ericsson,Ericsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120792,Fagerstrom,Fagerstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120793,Fellin,Fellin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120794,Forsell,Forsell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120795,Forsen,Forsen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120796,Forssman,Forssman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120797,Fredell,Fredell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120798,Fredlund,Fredlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120799,Froberg,Froberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120800,Froderberg,Froderberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120801,Goranson,Goranson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120802,Gran,Gran,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120803,Granlund,Granlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120804,Granquist,Granquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120805,Gunnerson,Gunnerson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120806,Hagberg,Hagberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120807,Haglund,Haglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120808,Hagstrom,Hagstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120809,Hakanson,Hakanson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120810,Hallberg,Hallberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120811,Hallgren,Hallgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120812,Hallin,Hallin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120813,Hallquist,Hallquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120814,Hallstrom,Hallstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120815,Hammerstrom,Hammerstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120816,Hansson,Hansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120817,Hast,Hast,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120818,Hedeen,Hedeen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120819,Hedlund,Hedlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120820,Hellstrom,Hellstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120821,Hogenson,Hogenson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120822,Hoglund,Hoglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120823,Holmquist,Holmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120824,Holmstrom,Holmstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120825,Hultberg,Hultberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120826,Hultgren,Hultgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120827,Israelson,Israelson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120828,Johansson,Johansson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120829,Kall,Kall,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120830,Karlsson,Karlsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120831,Klang,Klang,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120832,Kolberg,Kolberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120833,Landen,Landen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120834,Landgren,Landgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120835,Larsson,Larsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120836,Ledin,Ledin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120837,Lindblad,Lindblad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120838,Lindblom,Lindblom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120839,Lindbloom,Lindbloom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120840,Lindquist,Lindquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120841,Lindstrom,Lindstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120842,Linne,Linne,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120843,Lofgren,Lofgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120844,Lofquist,Lofquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120845,Loftin,Loftin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120846,Lovgren,Lovgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120847,Lundahl,Lundahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120848,Lundberg,Lundberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120849,Lundblad,Lundblad,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120850,Lundgren,Lundgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120851,Lundmark,Lundmark,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120852,Lundquist,Lundquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120853,Lundstrom,Lundstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120854,Malmberg,Malmberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120855,Malmgren,Malmgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120856,Malmquist,Malmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120857,Malmstrom,Malmstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120858,Mankell,Mankell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120859,Marken,Marken,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120860,Martenson,Martenson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120861,Moder,Moder,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120862,Monson,Monson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120863,Naslund,Naslund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120864,Nobel,Nobel,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120865,Nordahl,Nordahl,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120866,Nordine,Nordine,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120867,Nordling,Nordling,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120868,Nordstrom,Nordstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120869,Norell,Norell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120870,Norlander,Norlander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120871,Norlin,Norlin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120872,Norrby,Norrby,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120873,Nyberg,Nyberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120874,Nygren,Nygren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120875,Nylander,Nylander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120876,Nylund,Nylund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120877,Nyquist,Nyquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120878,Nystrom,Nystrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120879,Oesterling,Oesterling,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120880,Ogren,Ogren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120881,Ohman,Ohman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120882,Okeson,Okeson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120883,Olander,Olander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120884,Olson,Olson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120885,Olsson,Olsson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120886,Oscarson,Oscarson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120887,Ostberg,Ostberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120888,Oster,Oster,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120889,Ostergaard,Ostergaard,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120890,Ostman,Ostman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120891,Ostrom,Ostrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120892,Overgaard,Overgaard,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120893,Palmgren,Palmgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120894,Palmquist,Palmquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120895,Ramberg,Ramberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120896,Rehnquist,Rehnquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120897,Renstrom,Renstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120898,Roberg,Roberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120899,Rosander,Rosander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120900,Rosberg,Rosberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120901,Rosene,Rosene,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120902,Rosengren,Rosengren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120903,Rosenlund,Rosenlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120904,Rosenquist,Rosenquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120905,Ruden,Ruden,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120906,Rundkvist,Rundkvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120907,Rundquist,Rundquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120908,Rundqvist,Rundqvist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120909,Rydberg,Rydberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120910,Salmonson,Salmonson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120911,Sandberg,Sandberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120912,Sandeen,Sandeen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120913,Sandgren,Sandgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120914,Sandquist,Sandquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120915,Sandstrom,Sandstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120916,Sandvik,Sandvik,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120917,Seaborg,Seaborg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120918,Seagren,Seagren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120919,Sellgren,Sellgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120920,Siken,Siken,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120921,Sjoberg,Sjoberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120922,Sjoblom,Sjoblom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120923,Sjogren,Sjogren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120924,Sjostrom,Sjostrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120925,Skoglund,Skoglund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120926,Soder,Soder,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120927,Soderberg,Soderberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120928,Sodergren,Sodergren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120929,Soderholm,Soderholm,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120930,Soderlund,Soderlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120931,Soderman,Soderman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120932,Soderquist,Soderquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120933,Soderstrom,Soderstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120934,Soeder,Soeder,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120935,Spong,Spong,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120936,Stenberg,Stenberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120937,Stenstrom,Stenstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120938,Stolt,Stolt,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120939,Stoneback,Stoneback,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120940,Sundberg,Sundberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120941,Sundell,Sundell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120942,Sundquist,Sundquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120943,Sundstrom,Sundstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120944,Svedberg,Svedberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120945,Svensson,Svensson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120946,Sylvan,Sylvan,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120947,Thornquist,Thornquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120948,Thorstenson,Thorstenson,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120949,Thunberg,Thunberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120950,Tornquist,Tornquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120951,Ulin,Ulin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120952,Ursin,Ursin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120953,Valla,Valla,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120954,Wahlberg,Wahlberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120955,Wahlgren,Wahlgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120956,Wahlquist,Wahlquist,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120957,Wahlstrom,Wahlstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120958,Walberg,Walberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120959,Walgren,Walgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120960,Wallander,Wallander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120961,Wallgren,Wallgren,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120962,Wallin,Wallin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120963,Wassen,Wassen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120964,Weberg,Weberg,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120965,Wedin,Wedin,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120966,Wessman,Wessman,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120967,Westergard,Westergard,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120968,Westlund,Westlund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120969,Wicklund,Wicklund,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120970,Wickstrom,Wickstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120971,Widen,Widen,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120972,Wieslander,Wieslander,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120973,Wik,Wik,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120974,Wiker,Wiker,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120975,Wikstrom,Wikstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120976,Windell,Windell,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish
+120977,Youngstrom,Youngstrom,https://en.wiktionary.org/w/api.php,surnames,WikiRecordStatus.page,WikiRecordStatus.unevaluated,swe,Latin,Gender.unisex,Category:English surnames from Swedish

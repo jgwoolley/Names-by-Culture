@@ -26,39 +26,35 @@ def create_wikipages(sql_session:sqlmodel.Session, session:requests.Session, cat
     statement = statement.where(WikiRecord.url != None)
     results = sql_session.exec(statement)
 
-    counter = dict()
-
-    for parent in tqdm(results.fetchall()):
-        counter['parents'] = counter.get('parent_no_keys', 0) + 1
-        if len(dict(parent)) == 0:
-            counter['parent_no_keys'] = counter.get('parent_no_keys', 0) + 1
-            continue
-        pages = query_category_pages(parent.url, parent.title, session)
-
-        for page in pages:
-            if page.startswith('Appendix:'):
-                counter['appendix'] = counter.get('parent_no_pages', 0) + 1
+    with tqdm(results.fetchall(), desc='wikipages') as parents:
+        for parent in parents:
+            parents.set_postfix(parent.title)
+            if len(dict(parent)) == 0:
                 continue
-            child = WikiRecord(
-                name = page.split(' (')[0],
-                title = page,
-                gender = parent.gender,
-                url = parent.url,
-                parent_cmtitle = parent.title,
-                language_id = parent.language_id,
-                category_type = parent.category_type,
-                status = WikiRecordStatus.page,
-                language_script = find_suggested_script(sql_session=sql_session, names=page),
-            )
-            sql_session.add(child)
-            try:
-                sql_session.commit()
-            except Exception as e:
-                print('parent')
-                print(parent)
-                print('child')
-                print(child)
-                raise e
-            counter['children'] = counter.get('parent_no_keys', 0) + 1
-        sleep(1)
-    print(f'Added {counter}')
+            pages = query_category_pages(parent.url, parent.title, session)
+
+            for page in pages:
+                if page.startswith('Appendix:'):
+                    continue
+                child = WikiRecord(
+                    name = page.split(' (')[0],
+                    title = page,
+                    gender = parent.gender,
+                    url = parent.url,
+                    parent_cmtitle = parent.title,
+                    language_id = parent.language_id,
+                    category_type = parent.category_type,
+                    status = WikiRecordStatus.page,
+                    language_script = find_suggested_script(sql_session=sql_session, names=page),
+                )
+                sql_session.add(child)
+                try:
+                    sql_session.commit()
+                except Exception as e:
+                    #TODO: Potentially remove
+                    print('parent')
+                    print(parent)
+                    print('child')
+                    print(child)
+                    raise e
+            sleep(1)

@@ -21,9 +21,9 @@ A Python library to pull down Surnames, Given Names, and Place Names by Culture/
 ```
 
 ```console
-.venv/bin/python -m jgwoolley_names in --in wikicategories.csv --model WikiRecord
+foo@bar:~$ .venv/bin/python -m jgwoolley_names in --in wikicategories.csv --model WikiRecord
 ```
 
 ```console
-.venv/bin/python -m jgwoolley_names out --out wikicategories2.csv --model WikiRecord
+foo@bar:~$ .venv/bin/python -m jgwoolley_names out --out wikicategories2.csv --model WikiRecord
 ```
