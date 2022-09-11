@@ -37,7 +37,7 @@ A Python library to pull down Surnames, Given Names, and Place Names by Culture/
 3. You can import the [default records](wikicategories.csv) with the following:
 
 ```console
-foo@bar:~$ .venv/bin/python -m jgwoolley_names in --in wikicategories.csv --model WikiRecord
+foo@bar:~$ .venv/bin/python -m jgwoolley_names read_csv --in wikicategories.csv --model WikiRecord
 ```
 
 4. You can then run the interactive script which identifies languages/scripts for each given category:
@@ -49,7 +49,7 @@ foo@bar:~$ .venv/bin/python -m jgwoolley_names wikicategories
 5. You can output all of the categories/pages you have identified into a single file:
 
 ```console
-foo@bar:~$ .venv/bin/python -m jgwoolley_names out --out wikicategories2.csv --model WikiRecord
+foo@bar:~$ .venv/bin/python -m jgwoolley_names write_csv --out wikicategories2.csv --model WikiRecord
 ```
 
 6. You then can find all of the pages referenced by the categories you specified in this way:
@@ -75,3 +75,6 @@ foo@bar:~$ .venv/bin/python -m jgwoolley_names wikipages_out --out pages
 - Running from PyPi is not quite working
 - Add Redo Functionality
 - Possibly categories should go back to requiring uniqueness, wheras pages (names themselves) can be linked to multiple language/gender pairs
+- Duplication possible, maybe check if record was inserted
+- Put default alt-language names in file
+- Support alt-languages and countries that span multiple words [main.py](main.py)

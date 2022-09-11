@@ -6,7 +6,7 @@ from .languages import (
     find_language_id
 )
 
-from .model import (
+from .models import (
     LanguageName,
     Language, 
     WikiRecordStatus, 

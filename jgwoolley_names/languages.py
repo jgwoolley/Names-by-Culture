@@ -1,7 +1,7 @@
 import requests, csv, sqlmodel
 
 from typing import Iterator, List
-from .model import Language, LanguageName
+from .models import Language, LanguageName
 
 DEFAULT_URL = 'https://iso639-3.sil.org/sites/iso639-3/files/downloads/iso-639-3.tab'
 
@@ -58,6 +58,7 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
 
     sql_session.commit()
 
+    #TODO: Put in file
     for name, language_id in [
         ('Chichewa','nya'),
         ('Greek','ell'),
@@ -118,7 +119,7 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
         ('Sorbian', 'wen'),
         ('Nepali', 'nep'),
         ('Slavonic', 'chu'),
-        ('Philistine', 'mis'),
+        # ('Philistine', None),
         ('Prakrit', 'pra'),
         ('Proto-Hellenic', 'ell'),
         ('Proto-Iranian', 'fas'),
@@ -130,7 +131,6 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
         ('Tocharian', 'txb'),
         ('Tokelauan', 'tkl'),
         ('Tuvan', 'tyv')
-
     ]:
         sql_session.add(
             LanguageName(
@@ -141,8 +141,6 @@ def write_languages_to_sql(session:requests.Session, sql_session:sqlmodel.Sessio
         )
 
     sql_session.commit()
-    
-
 
 def find_language_id(sql_session:sqlmodel.Session, name:str) -> str:
     statement = sqlmodel.select(LanguageName).where(LanguageName.name == name)

@@ -9,7 +9,7 @@ from jgwoolley_wikimedia import (
 )
 
 from ..languages import write_languages_to_sql, find_language_id
-from ..model import (
+from ..models import (
     WikiRecord, 
     Language, 
     WikiRecordStatus, 
@@ -58,7 +58,8 @@ def split_subcategory(context:ActionContext):
 
     for child_cmtitle in query_subcategory(row.url, row.title, session):
         child = WikiRecord(
-            cmtitle = child_cmtitle,
+            title = child_cmtitle,
+            name = child_cmtitle,
             url = row.url,
             category_type = row.category_type,
             parent_cmtitle = row.title
@@ -74,6 +75,8 @@ def split_subcategory_default_value(context:ActionContext):
 
     # if context.category_info.size > 1000 and isinstance(context.suggested_language, str) and context.suggested_language == 'eng':
     #     return 4
+    if context.row.parent_cmtitle == None:
+        return 1000
     if context.category_info.pages == 0:
         return 1
     return 0
@@ -89,7 +92,8 @@ def double_split_subcategory(context:ActionContext):
 
     for parent_cmtitle in query_subcategory(row.url, row.title, session):
         parent = WikiRecord(
-            cmtitle = parent_cmtitle,
+            title = parent_cmtitle,
+            name = parent_cmtitle,
             url = row.url,
             category_type = row.category_type,
             status = WikiRecordStatus.split_category,
@@ -118,7 +122,8 @@ def double_split_subcategory(context:ActionContext):
                 status = WikiRecordStatus.unevaluated
 
             child = WikiRecord(
-                cmtitle = child_cmtitle,
+                title = child_cmtitle,
+                name = child_cmtitle,
                 url = row.url,
                 category_type = row.category_type,
                 parent_cmtitle = parent_cmtitle,

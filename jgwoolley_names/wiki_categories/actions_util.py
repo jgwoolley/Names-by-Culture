@@ -4,13 +4,13 @@ from typing import Dict, List, Optional, Tuple
 from jgwoolley_wikimedia import query_subcategory, query_category_pages, query_wikitext, query_category_info
 
 from ..languages import write_languages_to_sql, find_language_id
-from ..model import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
+from ..models import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
 from .models import CategoryInfo, Action, ActionContext
 
 genders = [x.value for x in Gender]
 
 def get_cmtitle_tokens(row:WikiRecord) -> List[str]:
-    return row.cmtitle.split(':')[-1].split()
+    return row.title.split(':')[-1].split()
 
 def find_suggested_language(sql_session:sqlmodel.Session, cmtitle_tokens:List[str]) -> str:
     suggested_values = []
@@ -55,7 +55,7 @@ def choose_language(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:O
     return language_id
 
 def choose_script_language(context:ActionContext):
-    return choose_language(sql_session=context.sql_session, cmtitle=context.row.cmtitle, suggested_value=context.suggested_script)
+    return choose_language(sql_session=context.sql_session, cmtitle=context.row.title, suggested_value=context.suggested_script)
 
 def choose_gender(sql_session:sqlmodel.Session, cmtitle:str, suggested_value:Optional[str]) -> str:
     input_guide = f'Please select a gender for \"{cmtitle}\" \"{suggested_value}\" or type \"exit\"\n'

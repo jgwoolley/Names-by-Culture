@@ -1,6 +1,6 @@
 import argparse
 
-from typing import List
+from typing import List, Tuple
 from .models import (
     LanguageName, 
     Language, 
@@ -12,18 +12,22 @@ from .models import (
 def read_categories(args:argparse.ArgumentParser) -> List[WikiRecord]:
     #TODO: Potentially remove defautls, make this its own seperate file
     if args.categories is None:
-        url = 'https://en.wiktionary.org/w/api.php'
         return [
             WikiRecord(    
                 title = 'Category:Given names by language',
-                url = url,
+                url = 'https://en.wiktionary.org/w/api.php',
                 category_type = 'given_names'
             ),
             WikiRecord(    
                 title = 'Category:Surnames_by_language',
-                url = url,
+                url = 'https://en.wiktionary.org/w/api.php',
                 category_type = 'surnames'
-            )
+            ),
+            # WikiRecord(    
+            #     title = 'Category:Cities by country',
+            #     url = 'https://en.wikipedia.org/w/api.php',
+            #     category_type = 'cities'
+            # )
         ]
     
     import json
@@ -52,45 +56,29 @@ def _create_wikicategories(args:argparse.ArgumentParser):
 
 models = {cls.__name__: cls for cls in [LanguageName, Language, LanguageScriptRange, WikiRecord]}
 
-def _sql_to_csv(args:argparse.ArgumentParser):
+def _write_csv(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
-    from tqdm import tqdm
-    import csv
+    from .sqlmodel_csv import write_csv, TqdmType 
 
     cls = models[args.model]
-
-    writer = csv.DictWriter(args.out_csv, cls.__fields__.keys())
-    writer.writeheader()
-
+    print(f'Writing as {cls.__name__}')
     engine = create_engine(args.sqlite_database)
     SQLModel.metadata.create_all(engine)
-    print(f'Writing as {cls.__name__}')
     with Session(engine) as sql_session:
         statement = select(cls)
-        with tqdm(sql_session.exec(statement), desc='in') as progress:
-            for idx, row in enumerate(progress):
-                writer.writerow(row.dict(row.dict(exclude={'id', 'status_backup'})))
+        write_csv(sql_session, statement, args.out_csv, cls, TqdmType.tqdm, 'Write Csv', {'id', 'status_backup'})
 
-def _csv_to_sql(args:argparse.ArgumentParser):
+
+def _read_csv(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
-    from sqlalchemy.exc import IntegrityError
-    from tqdm import tqdm
-    import csv
+    from .sqlmodel_csv import read_csv, TqdmType
 
     cls = models[args.model]
-    reader = csv.DictReader(args.in_csv)
-
+    print(f'Reading as {cls.__name__}')
     engine = create_engine(args.sqlite_database)
     SQLModel.metadata.create_all(engine)
-    print(f'Reading as {cls.__name__}')
-    with Session(engine) as sql_session, tqdm(reader, desc='out') as progress:
-        for idx, row in enumerate(progress):
-            record = cls.parse_obj(row)
-            if len(record.dict()) == 0:
-                raise Exception(f'Could not read row {idx}: {record} or {row}')
-
-            sql_session.add(record)
-            sql_session.commit()
+    with Session(engine) as sql_session:
+        read_csv(sql_session, args.in_csv, cls, TqdmType.tqdm, 'Read Csv', {'id', 'status_backup'})
 
 # def _wikicategories_redo(args:argparse.ArgumentParser):
 #     from sqlmodel import SQLModel, create_engine, Session, select
@@ -121,11 +109,12 @@ def _create_wikipages(args:argparse.ArgumentParser):
         with Session(engine) as sql_session:
             create_wikipages(sql_session=sql_session, session=session)
 
-def _write_pages(args:argparse.ArgumentParser):
+def _write_wikipages(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
     from sqlmodel import SQLModel, create_engine, Session, select
     from tqdm import tqdm
     import os, csv, json
+    from .sqlmodel_csv import write_csv, TqdmType, create_tqdm
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         engine = create_engine(args.sqlite_database)
@@ -140,6 +129,10 @@ def _write_pages(args:argparse.ArgumentParser):
                     language_ids.add(row.language_id)
                     category_types.add(row.category_type)
             
+            exclude = {'id', 'status_backup'}
+
+            progress = create_tqdm(language_ids, TqdmType.tqdm, 'Languages')
+
             with tqdm(language_ids, desc='languages') as progress:
                 for language_id in progress:
                     progress.set_description_str(language_id)
@@ -155,11 +148,11 @@ def _write_pages(args:argparse.ArgumentParser):
 
                         count = 0
                         with open(path, 'w') as file:
-                            writer = csv.DictWriter(file, WikiRecord.__fields__.keys())
-                            writer.writeheader()
-                            for idx, row in enumerate(sql_session.exec(statement)):
-                                writer.writerow(row.dict(exclude={'id', 'status_backup'}))
+                            def on_record(row):
                                 count+=1
+                                return row
+
+                            write_csv(sql_session, statement, file, WikiRecord, TqdmType.none, exclude={'id', 'status_backup'}, on_record=on_record)
                         metadatum[category_type] = count
                     path = os.path.join(args.out_dir, language_id, 'metadata.json')
                     metadatum['total'] = sum(metadatum.values())
@@ -179,6 +172,38 @@ def _write_pages(args:argparse.ArgumentParser):
                 for metadatum in metadata:
                     writer.writerow(metadatum)
 
+def _read_wikipages(args:argparse.ArgumentParser):
+    from sqlmodel import SQLModel, create_engine, Session, select
+    import os, csv
+
+    from .sqlmodel_csv import write_csv, read_csv, TqdmType, create_tqdm, get_fieldnames
+
+    engine = create_engine(args.sqlite_database)
+    SQLModel.metadata.create_all(engine)
+    with Session(engine) as sql_session:
+        exclude = {'id', 'status_backup'}
+        fieldnames = get_fieldnames(WikiRecord, exclude)
+        count = 0
+        with open(args.out_csv, 'w') as file:
+            writer = csv.DictWriter(file, fieldnames)
+            writer.writeheader()
+
+            for root,dirs,files in create_tqdm(os.walk(args.in_dir),TqdmType.tqdm, 'Write WikiPages'):
+                for file_name in files:
+                    if not file_name.endswith('.csv'):
+                        continue
+                    file_path = os.path.join(root, file_name)
+                    with open(file_path, 'r') as file:
+                        progress = csv.DictReader(file, fieldnames)
+                        next(progress)
+                        for row in progress:
+                            if row is None:
+                                continue
+                            row.pop(None, None)
+                            writer.writerow(row)
+                            count+=1
+        with open(args.out_csv, 'r') as file:
+            read_csv(sql_session, file, WikiRecord, TqdmType.tqdm, 'Read WikiPages', exclude, total=count)
 
 def create_argparser() -> argparse.ArgumentParser:
     description='A Python library to pull down Surnames, Given Names, and Place Names by Culture/Language'
@@ -193,27 +218,28 @@ def create_argparser() -> argparse.ArgumentParser:
     subparsers.add_parser('wikicategories', help='Parse wiki-categories').set_defaults(func=_create_wikicategories)
     subparsers.add_parser('wikipages', help='Parse wiki-pages').set_defaults(func=_create_wikipages)
     
-    subparser = subparsers.add_parser('wikipages_out', help='Write wiki-pages')
+    subparser = subparsers.add_parser('write_wikipages', help='Write wikipages')
     subparser.add_argument('--out', metavar='o', dest='out_dir', required=True)
-    subparser.set_defaults(func=_write_pages)
+    subparser.set_defaults(func=_write_wikipages)
 
-    subparser = subparsers.add_parser('out', help='output sql database to csv')
+    subparser = subparsers.add_parser('read_wikipages', help='Read wikipages')
+    subparser.add_argument('--in', metavar='i', dest='in_dir', required=True)
+    subparser.add_argument('--out', metavar='o', dest='out_csv', required=True)
+    subparser.set_defaults(func=_read_wikipages)
+
+    subparser = subparsers.add_parser('write_csv', help='output sql database to csv')
     subparser.add_argument('--out', metavar='o', dest='out_csv', type=argparse.FileType('w'), required=True)
     subparser.add_argument('--model', metavar='m', dest='model', choices=models.keys(), required=True)
-    subparser.set_defaults(func=_sql_to_csv)
+    subparser.set_defaults(func=_write_csv)
 
-    subparser = subparsers.add_parser('in', help='ingest csv into sql database')
+    subparser = subparsers.add_parser('read_csv', help='ingest csv into sql database')
     subparser.add_argument('--in', metavar='i', dest='in_csv', type=argparse.FileType('r'), required=True)
     subparser.add_argument('--model', metavar='m', dest='model', choices=models.keys(), required=True)
-    subparser.set_defaults(func=_csv_to_sql)
+    subparser.set_defaults(func=_read_csv)
 
-    #TODO: Properly test
+    #TODO: add
     # subparser = subparsers.add_parser('wikicategories_redo', help='set all values of wiki-categories to unparsed')
     # subparser.set_defaults(func=_wikicategories_redo)   
-
-    # wikipages_out = subparsers.add_parser('wikipages_out', help='output wiki-categories to csv')
-    # wikipages_out.add_argument('--out', metavar='o', dest='out', type=argparse.FileType('w'), default='wikipages_out.csv')
-    # wikipages_out.set_defaults(func=_wikipages_out)
 
     return parser
 

@@ -65,7 +65,9 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
     return (category_type, parent_cmtitle, url)
 
 def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session, categories=List[WikiRecord]):
+    print('Read languages')
     write_languages_to_sql(sql_session=sql_session, session=session)
+    print('Read scripts')
     write_scripts_to_sql(sql_session=sql_session, session=session)
     actions = create_actions()
 
@@ -73,7 +75,13 @@ def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session
         category_type, parent_cmtitle, url = process_parent(sql_session=sql_session, session=session, parent=parent)
 
         while True:
-            statement = sqlmodel.select(WikiRecord).where(WikiRecord.status == WikiRecordStatus.unevaluated or WikiRecord.status == WikiRecordStatus.redo).where(WikiRecord.category_type == category_type)
+            statement = sqlmodel.select(WikiRecord)
+            statement = statement.where(
+                sqlmodel.or_(WikiRecord.status == WikiRecordStatus.unevaluated,
+                    WikiRecord.status == WikiRecordStatus.redo
+                ),
+                WikiRecord.category_type == category_type
+                )
             results = sql_session.exec(statement)
 
             row:WikiRecord = results.first()

@@ -2,7 +2,7 @@ from pydantic import BaseModel, validator
 import dataclasses
 from typing import Callable, List, Optional, Dict
 
-from ..model import WikiRecord
+from ..models import WikiRecord
 
 import sqlmodel, requests
 

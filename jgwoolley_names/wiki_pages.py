@@ -34,7 +34,7 @@ def create_wikipages(sql_session:sqlmodel.Session, session:requests.Session, cat
             pages = query_category_pages(parent.url, parent.title, session)
 
             for page in pages:
-                if page.startswith('Appendix:'):
+                if page.startswith('Appendix:') or page.startswith('List of '):
                     continue
                 child = WikiRecord(
                     name = page.split(' (')[0],
