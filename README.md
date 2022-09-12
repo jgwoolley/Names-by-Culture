@@ -78,3 +78,6 @@ foo@bar:~$ .venv/bin/python -m jgwoolley_names wikipages_out --out pages
 - Duplication possible, maybe check if record was inserted
 - Put default alt-language names in file
 - Support alt-languages and countries that span multiple words [main.py](main.py)
+- Get default fields from parents fields.
+- Potentially create LRU cache in load_iso639_3, load_scripts
+- Add multiple suggestions as option in load_scripts?

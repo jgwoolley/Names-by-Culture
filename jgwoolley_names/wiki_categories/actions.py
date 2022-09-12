@@ -8,7 +8,10 @@ from jgwoolley_wikimedia import (
     query_category_info
 )
 
-from ..languages import write_languages_to_sql, find_language_id
+from jgwoolley_languages import (
+    find_language_id
+)
+
 from ..models import (
     WikiRecord, 
     Language, 

@@ -2,8 +2,10 @@ import logging, requests, sqlmodel
 
 from typing import Dict, List, Optional, Tuple
 from jgwoolley_wikimedia import query_subcategory, query_category_pages, query_wikitext, query_category_info
+from jgwoolley_languages import (
+    find_language_id
+)
 
-from ..languages import write_languages_to_sql, find_language_id
 from ..models import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
 from .models import CategoryInfo, Action, ActionContext
 

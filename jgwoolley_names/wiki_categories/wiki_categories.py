@@ -9,8 +9,11 @@ from jgwoolley_wikimedia import (
     query_category_info
 )
 
-from ..languages import write_languages_to_sql, find_language_id
-from ..scripts import write_scripts_to_sql, find_suggested_script
+from jgwoolley_languages import (
+    find_language_id,
+    find_suggested_script,
+    load_all
+)
 from ..models import WikiRecord, Language, WikiRecordStatus, Gender, LanguageName
 
 from .models import CategoryInfo, Action, ActionContext
@@ -65,10 +68,7 @@ def process_parent(sql_session:sqlmodel.Session, session:requests.Session, paren
     return (category_type, parent_cmtitle, url)
 
 def create_wikicategories(sql_session:sqlmodel.Session, session:requests.Session, categories=List[WikiRecord]):
-    print('Read languages')
-    write_languages_to_sql(sql_session=sql_session, session=session)
-    print('Read scripts')
-    write_scripts_to_sql(sql_session=sql_session, session=session)
+    load_all(sql_session=sql_session, session=session)
     actions = create_actions()
 
     for parent in categories:

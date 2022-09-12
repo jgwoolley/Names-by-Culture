@@ -1,5 +1,3 @@
-#TODO: change to models.py
-
 from sqlmodel.sql.expression import Select, SelectOfScalar
 
 SelectOfScalar.inherit_cache = True  # type: ignore
@@ -14,53 +12,7 @@ from typing import Optional, Iterable
 
 from pydantic import validator
 
-class LanguageName(SQLModel, table=True):
-    name : str = Field(primary_key=True)
-    language_id: str
-    source: str
-
-    # @validator('name', 'language_id', always=True)
-    # def to_lowercase(cls, v:str):
-    #     if not isinstance(v, str):
-    #         return None
-    #     assert v.isalpha() == True, 'Test'
-    #     return v.lower()
-
-class Language(SQLModel, table=True): 
-    id : str = Field(primary_key=True)
-    part2b : Optional[str]
-    part2t : Optional[str]
-    part1 : Optional[str]
-    scope : Optional[str]
-    language_type : Optional[str]
-    ref_name : Optional[str]
-    comment : Optional[str]
-
-    # @validator('id', 'part2b', 'part2t', 'part1', 'scope', 'language_type', 'ref_name', always=True)
-    # def to_lowercase(cls, v:str):
-    #     if not isinstance(v, str):
-    #         return None
-    #     assert v.isalpha() == True, 'Test'
-    #     return v.lower()
-
-    def create_references(self):
-        return [
-            LanguageName(
-                name=self.ref_name,
-                language_id=self.id,
-                source='language_object'
-            ),
-            LanguageName(
-                name=self.id,
-                language_id=self.id,
-                source='language_object'
-            )
-        ]
-
-class LanguageScriptRange(SQLModel, table=True): 
-    min : int = Field(primary_key=True)
-    max: int
-    name: str
+from jgwoolley_languages import LanguageName, Language, LanguageScriptRange
 
 class WikiRecordStatus(enum.Enum):
     unevaluated = "unevaluated"

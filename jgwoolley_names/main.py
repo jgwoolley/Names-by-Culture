@@ -9,56 +9,40 @@ from .models import (
     WikiRecordStatus
 )
 
-def read_categories(args:argparse.ArgumentParser) -> List[WikiRecord]:
-    #TODO: Potentially remove defautls, make this its own seperate file
-    if args.categories is None:
-        return [
-            WikiRecord(    
-                title = 'Category:Given names by language',
-                url = 'https://en.wiktionary.org/w/api.php',
-                category_type = 'given_names'
-            ),
-            WikiRecord(    
-                title = 'Category:Surnames_by_language',
-                url = 'https://en.wiktionary.org/w/api.php',
-                category_type = 'surnames'
-            ),
-            # WikiRecord(    
-            #     title = 'Category:Cities by country',
-            #     url = 'https://en.wikipedia.org/w/api.php',
-            #     category_type = 'cities'
-            # )
-        ]
-    
-    import json
-    with args.categories.open('r') as fp:
-        return [WikiRecord.parse_obj(x) for x in json.load(fp)]
-
 def _create_wikicategories(args:argparse.ArgumentParser):
     from requests_cache import CachedSession
-    from sqlmodel import SQLModel, create_engine, Session
+    from sqlmodel import SQLModel, create_engine, Session, or_
+    import sqlmodel
     from .wiki_categories import create_wikicategories
-
-    categories = read_categories(args)
-    for parent in categories:
-        if not isinstance(parent, WikiRecord):
-            raise Exception(f'Given category isn\'t WikiRecord: {type(parent)}')
-
-        for k, v in {'url': parent.url, 'category_type':parent.category_type, 'title': parent.title}.items():
-            if v is None:
-                raise TypeError(f'{k} must not be none for record: {parent}')
+    from jgwoolley_sqlmodel_util import read_csv, TqdmType
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         engine = create_engine(args.sqlite_database)
+        categories = []
         with Session(engine) as sql_session:
             SQLModel.metadata.create_all(engine)
+            with args.categories as file:
+                def on_record(x):
+                    categories.append(x)
+                    return x
+
+                read_csv(sql_session, file, WikiRecord, TqdmType.tqdm, 'Read Categories', {'id', 'status_backup'}, on_record)
+
+            with args.language_names as file:
+                statement = sqlmodel.select(LanguageName)
+                statement = statement.where(LanguageName.source != 'language_object')
+                results = sql_session.exec(statement)
+                if not results.first():
+                    read_csv(sql_session, file, LanguageName, TqdmType.tqdm, 'Read LanguageNames', {'id', 'status_backup'})
+
+
             create_wikicategories(sql_session=sql_session, session=session, categories=categories)
 
 models = {cls.__name__: cls for cls in [LanguageName, Language, LanguageScriptRange, WikiRecord]}
 
 def _write_csv(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
-    from .sqlmodel_csv import write_csv, TqdmType 
+    from jgwoolley_sqlmodel_util import write_csv, TqdmType 
 
     cls = models[args.model]
     print(f'Writing as {cls.__name__}')
@@ -71,7 +55,7 @@ def _write_csv(args:argparse.ArgumentParser):
 
 def _read_csv(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
-    from .sqlmodel_csv import read_csv, TqdmType
+    from jgwoolley_sqlmodel_util import read_csv, TqdmType
 
     cls = models[args.model]
     print(f'Reading as {cls.__name__}')
@@ -114,7 +98,7 @@ def _write_wikipages(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
     from tqdm import tqdm
     import os, csv, json
-    from .sqlmodel_csv import write_csv, TqdmType, create_tqdm
+    from jgwoolley_sqlmodel_util import write_csv, TqdmType, create_tqdm
 
     with CachedSession(cache_name=args.cache_name, backend=args.backend) as session:
         engine = create_engine(args.sqlite_database)
@@ -172,11 +156,12 @@ def _write_wikipages(args:argparse.ArgumentParser):
                 for metadatum in metadata:
                     writer.writerow(metadatum)
 
+#TODO: Possibly merge_wikipages, and provide loading seperately
 def _read_wikipages(args:argparse.ArgumentParser):
     from sqlmodel import SQLModel, create_engine, Session, select
     import os, csv
 
-    from .sqlmodel_csv import write_csv, read_csv, TqdmType, create_tqdm, get_fieldnames
+    from jgwoolley_sqlmodel_util import write_csv, read_csv, TqdmType, create_tqdm, get_fieldnames
 
     engine = create_engine(args.sqlite_database)
     SQLModel.metadata.create_all(engine)
@@ -188,6 +173,7 @@ def _read_wikipages(args:argparse.ArgumentParser):
             writer = csv.DictWriter(file, fieldnames)
             writer.writeheader()
 
+            #copy from language csv files into one csv file
             for root,dirs,files in create_tqdm(os.walk(args.in_dir),TqdmType.tqdm, 'Write WikiPages'):
                 for file_name in files:
                     if not file_name.endswith('.csv'):
@@ -212,7 +198,8 @@ def create_argparser() -> argparse.ArgumentParser:
     parser.add_argument('--cache_name', metavar='c', dest='cache_name', default='names.db')
     parser.add_argument('--backend', metavar='b', dest='backend', default='sqlite')
     parser.add_argument('--sqlite_database', metavar='s', dest='sqlite_database', default='sqlite:///names.db')
-    parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('w'), default=None)
+    parser.add_argument('--categories', metavar='c', dest='categories', type=argparse.FileType('r'), default='categories.csv')
+    parser.add_argument('--language_names', metavar='l', dest='language_names', type=argparse.FileType('r'), default='language_names.csv')
 
     subparsers = parser.add_subparsers(dest='command',help='sub-command help', required=True)
     subparsers.add_parser('wikicategories', help='Parse wiki-categories').set_defaults(func=_create_wikicategories)
